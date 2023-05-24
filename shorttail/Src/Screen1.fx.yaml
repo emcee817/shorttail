@@ -31,14 +31,14 @@ Screen1 As screen:
         TemplatePadding: =0
         TemplateSize: =484
         Visible: =LodgementTabTag
-        Width: =1271
+        Width: =1255
         X: =44
         Y: =233
         ZIndex: =1
 
         LblLodgementQ1 As label:
             FocusedBorderColor: =LblLodgementQ1.BorderColor
-            Height: =24
+            Height: =25
             HoverBorderColor: =LblLodgementQ1.BorderColor
             HoverColor: =LblLodgementQ1.Color
             HoverFill: =LblLodgementQ1.Fill
@@ -51,11 +51,11 @@ Screen1 As screen:
             PressedColor: =LblLodgementQ1.Color
             PressedFill: =LblLodgementQ1.Fill
             Size: =14
-            Text: ="Has confirmation of claim lodgement been provided to customer?"
+            Text: ="If sensitive claim, has it been referred to a High Complex Claims Specialist?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =630
+            Width: =694
             X: =88
-            Y: =183
+            Y: =163
             ZIndex: =2
 
         Separator2 As rectangle:
@@ -89,7 +89,7 @@ Screen1 As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =140
             X: =112
-            Y: =212
+            Y: =191
             ZIndex: =6
 
         Title2_2 As label:
@@ -107,7 +107,7 @@ Screen1 As screen:
             PressedColor: =Title2_2.Color
             PressedFill: =Title2_2.Fill
             Size: =18
-            Text: ="Lodgement 0%"
+            Text: ="Lodgement"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
@@ -129,11 +129,11 @@ Screen1 As screen:
             PressedColor: =LblLodgementQ2.Color
             PressedFill: =LblLodgementQ2.Fill
             Size: =14
-            Text: ="Have all relevant ClaimCenter fields been adequately completed?"
+            Text: ="Has the claim been linked to the correct Catastrophe Code?"
             VerticalAlign: =VerticalAlign.Top
             Width: =619
             X: =88
-            Y: =309
+            Y: =274
             ZIndex: =9
 
         Title2_5 As label:
@@ -156,7 +156,7 @@ Screen1 As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =140
             X: =112
-            Y: =338
+            Y: =303
             ZIndex: =11
 
         Cmb_LodgementQ1 As combobox:
@@ -196,7 +196,7 @@ Screen1 As screen:
             SelectMultiple: =false
             Width: =145
             X: =1064
-            Y: =172
+            Y: =151
             ZIndex: =15
 
         Cmb_LodgementQ2 As combobox:
@@ -235,7 +235,7 @@ Screen1 As screen:
             SelectMultiple: =false
             Width: =145
             X: =1064
-            Y: =298
+            Y: =263
             ZIndex: =16
 
         TxtLodgementQ1 As text:
@@ -253,7 +253,7 @@ Screen1 As screen:
             PressedFill: =TxtLodgementQ1.Fill
             Width: =1002
             X: =207
-            Y: =215
+            Y: =194
             ZIndex: =17
 
         TxtLodgementQ2 As text:
@@ -271,7 +271,7 @@ Screen1 As screen:
             PressedFill: =TxtLodgementQ2.Fill
             Width: =1002
             X: =207
-            Y: =340
+            Y: =305
             ZIndex: =18
 
         UpdateIcon_1 As icon.Save:
@@ -313,7 +313,7 @@ Screen1 As screen:
             PressedBorderColor: =ColorFade(UpdateIcon_1.BorderColor, -20%)
             PressedColor: =ColorFade(UpdateIcon_1.Color, -20%)
             PressedFill: =UpdateIcon_1.Fill
-            X: =24
+            X: =10
             Y: =408
             ZIndex: =19
 
@@ -332,11 +332,11 @@ Screen1 As screen:
             PressedColor: =LblLodgementQ3.Color
             PressedFill: =LblLodgementQ3.Fill
             Size: =14
-            Text: ="Has Claim been inputted into Guidewire (CC10) within timeframe?"
+            Text: ="Has claim been lodged within appropriate timeframes?"
             VerticalAlign: =VerticalAlign.Top
             Width: =630
             X: =88
-            Y: =73
+            Y: =52
             ZIndex: =20
 
         Title2_3 As label:
@@ -359,7 +359,7 @@ Screen1 As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =140
             X: =112
-            Y: =102
+            Y: =81
             ZIndex: =21
 
         Cmb_LodgementQ3 As combobox:
@@ -400,7 +400,7 @@ Screen1 As screen:
             SelectMultiple: =false
             Width: =145
             X: =1064
-            Y: =62
+            Y: =41
             ZIndex: =22
 
         TxtLodgementQ3 As text:
@@ -418,8 +418,111 @@ Screen1 As screen:
             PressedFill: =TxtLodgementQ3.Fill
             Width: =1002
             X: =207
-            Y: =105
+            Y: =84
             ZIndex: =23
+
+        LblLodgementQ4 As label:
+            Fill: =RGBA(0, 134, 208, 1)
+            FocusedBorderColor: =LblLodgementQ4.BorderColor
+            Height: =26
+            HoverBorderColor: =LblLodgementQ4.BorderColor
+            HoverColor: =LblLodgementQ4.Color
+            HoverFill: =LblLodgementQ4.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblLodgementQ4.BorderColor
+            PressedColor: =LblLodgementQ4.Color
+            PressedFill: =LblLodgementQ4.Fill
+            Size: =14
+            Text: ="File Notes adequate and appropriate templates used? (Claims services team)"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =706
+            X: =89
+            Y: =388
+            ZIndex: =24
+
+        Title2_6 As label:
+            FocusedBorderColor: =Title2_6.BorderColor
+            Height: =25
+            HoverBorderColor: =Title2_6.BorderColor
+            HoverColor: =Title2_6.Color
+            HoverFill: =Title2_6.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =Title2_6.BorderColor
+            PressedColor: =Title2_6.Color
+            PressedFill: =Title2_6.Fill
+            Size: =12
+            Text: |-
+                ="Comment:"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =140
+            X: =113
+            Y: =416
+            ZIndex: =25
+
+        Cmb_LodgementQ2_1 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =
+                If(IsEmpty(Cmb_LodgementQ2_1),Filter(QAChecklistScore, Score="Yes"),Filter(QAChecklistScore, Score=ThisItem.'LodgementQ2 (LodgementQ20)'))
+                
+                //Filter(QAChecklistScore, Score=ThisItem.'LodgementQ2 (LodgementQ20)')
+            DisplayFields: =["Score"]
+            DisplayMode: |-
+                =//If(ThisItem.Status= "Closed",DisplayMode.Disabled,DisplayMode.Edit)
+                
+                If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =Cmb_LodgementQ2_1.BorderColor
+            Height: =35
+            HoverBorderColor: =ColorFade(Cmb_LodgementQ2_1.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =Cmb_LodgementQ2_1.ChevronBackground
+            NoSelectionText: ="Find Items"
+            OnChange: |-
+                =/*
+                Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { LodgementQ2: Cmb_LodgementQ2.Selected.Score} , { LodgementQ2Point: If(Cmb_LodgementQ2.Selected.Score = "Yes",0,If(Cmb_LodgementQ2.Selected.Score = "No",0 ,If(Cmb_LodgementQ2.Selected.Score = "Partial",0,If(Cmb_LodgementQ2.Selected.Score = "NA",0))))} );
+                
+                //Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { LodgementQ1Points: If(Cmb_LodgementQ2.Selected.Score = "Yes",0,If(Cmb_LodgementQ2.Selected.Score = "No",0 ,If(Cmb_LodgementQ2.Selected.Score = "Partial",0,If(Cmb_LodgementQ2.Selected.Score = "NA",0))))} )
+                */
+                
+                Set(VarLodgementQ2Points, If(Cmb_LodgementQ2_1.Selected.Score = "Yes",0,If(Cmb_LodgementQ2_1.Selected.Score = "No",0 ,If(Cmb_LodgementQ2_1.Selected.Score = "Partial",0,If(Cmb_LodgementQ2_1.Selected.Score = "NA",0)))))
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Cmb_LodgementQ2_1.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,Cmb_LodgementQ2_1.SearchText,"Score")
+            SelectionTagColor: =Cmb_LodgementQ2_1.HoverColor
+            SelectionTagFill: =Cmb_LodgementQ2_1.HoverFill
+            SelectMultiple: =false
+            Width: =145
+            X: =1065
+            Y: =376
+            ZIndex: =26
+
+        TxtLodgementQ2_1 As text:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            Default: =ThisItem.LodgementQ2Comment1
+            DisplayMode: |-
+                =//If(ThisItem.Status= "Closed",DisplayMode.Disabled,DisplayMode.Edit)
+                
+                If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =TxtLodgementQ2_1.BorderColor
+            Height: =37
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =TxtLodgementQ2_1.HoverBorderColor
+            PressedColor: =TxtLodgementQ2_1.Color
+            PressedFill: =TxtLodgementQ2_1.Fill
+            Width: =1002
+            X: =208
+            Y: =418
+            ZIndex: =27
 
     "GalleryHeading As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderStyle: =BorderStyle.None
@@ -1330,11 +1433,11 @@ Screen1 As screen:
             PressedColor: =LblIndemQ1Comment2.Color
             PressedFill: =LblIndemQ1Comment2.Fill
             Size: =14
-            Text: ="Is indemnity decision correct and reasons clear on the file ? "
+            Text: ="Is indemnity decision correct? "
             VerticalAlign: =VerticalAlign.Top
             Width: =630
             X: =94
-            Y: =25
+            Y: =43
             ZIndex: =2
 
         Separator2_2 As rectangle:
@@ -1367,8 +1470,8 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =67
+            X: =131
+            Y: =281
             ZIndex: =6
 
         Title2_7 As label:
@@ -1386,15 +1489,16 @@ Screen1 As screen:
             PressedColor: =Title2_7.Color
             PressedFill: =Title2_7.Fill
             Size: =18
-            Text: ="Indemnity 10%"
+            Text: ="Coverage"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
             ZIndex: =7
 
         LblIndemQ2Comment2 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblIndemQ2Comment2.BorderColor
-            Height: =24
+            Height: =38
             HoverBorderColor: =LblIndemQ2Comment2.BorderColor
             HoverColor: =LblIndemQ2Comment2.Color
             HoverFill: =LblIndemQ2Comment2.Fill
@@ -1409,12 +1513,13 @@ Screen1 As screen:
             Size: =14
             Text: ="Has reasons for indemnity decision been noted in Files notes"
             VerticalAlign: =VerticalAlign.Top
-            Width: =630
-            X: =94
-            Y: =301
+            Width: =119
+            X: =825
+            Y: =397
             ZIndex: =9
 
         Title2_24 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_24.BorderColor
             Height: =25
             HoverBorderColor: =Title2_24.BorderColor
@@ -1433,14 +1538,14 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =340
+            X: =857
+            Y: =447
             ZIndex: =11
 
         LblIndemQ3Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblIndemQ3Comment2.BorderColor
-            Height: =24
+            Height: =22
             HoverBorderColor: =LblIndemQ3Comment2.BorderColor
             HoverColor: =LblIndemQ3Comment2.Color
             HoverFill: =LblIndemQ3Comment2.Fill
@@ -1455,12 +1560,13 @@ Screen1 As screen:
             Size: =14
             Text: ="If indemnity denied, has process been followed?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =678
-            X: =94
-            Y: =395
+            Width: =116
+            X: =1055
+            Y: =400
             ZIndex: =13
 
         Title2_27 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_27.BorderColor
             Height: =25
             HoverBorderColor: =Title2_27.BorderColor
@@ -1479,8 +1585,8 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =439
+            X: =1131
+            Y: =447
             ZIndex: =15
 
         Cmb_IndemQ1 As combobox:
@@ -1512,8 +1618,8 @@ Screen1 As screen:
             SelectionTagFill: =Cmb_IndemQ1.HoverFill
             SelectMultiple: =false
             Width: =443
-            X: =772
-            Y: =25
+            X: =807
+            Y: =32
             ZIndex: =17
 
         Cmb_IndemQ2 As combobox:
@@ -1524,8 +1630,9 @@ Screen1 As screen:
                 Filter(QAChecklistScore, Score=ThisItem.IndemnityQ2)
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Cmb_IndemQ2.BorderColor
-            Height: =35
+            Height: =31
             HoverBorderColor: =ColorFade(Cmb_IndemQ2.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =Cmb_IndemQ2.ChevronBackground
@@ -1543,9 +1650,9 @@ Screen1 As screen:
             SelectionTagColor: =Cmb_IndemQ2.HoverColor
             SelectionTagFill: =Cmb_IndemQ2.HoverFill
             SelectMultiple: =false
-            Width: =443
-            X: =772
-            Y: =297
+            Width: =70
+            X: =958
+            Y: =402
             ZIndex: =18
 
         Cmb_IndemQ3 As combobox:
@@ -1556,8 +1663,9 @@ Screen1 As screen:
                 Filter(QAChecklistScore, Score=ThisItem.IndemnityQ3)
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Cmb_IndemQ3.BorderColor
-            Height: =35
+            Height: =29
             HoverBorderColor: =ColorFade(Cmb_IndemQ3.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =Cmb_IndemQ3.ChevronBackground
@@ -1575,9 +1683,9 @@ Screen1 As screen:
             SelectionTagColor: =Cmb_IndemQ3.HoverColor
             SelectionTagFill: =Cmb_IndemQ3.HoverFill
             SelectMultiple: =false
-            Width: =443
-            X: =772
-            Y: =389
+            Width: =84
+            X: =1187
+            Y: =397
             ZIndex: =19
 
         TxtIndemQ1Comment1 As text:
@@ -1585,44 +1693,46 @@ Screen1 As screen:
             Default: =ThisItem.IndemnityQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtIndemQ1Comment1.BorderColor
-            Height: =37
+            Height: =89
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtIndemQ1Comment1.HoverBorderColor
             PressedColor: =TxtIndemQ1Comment1.Color
             PressedFill: =TxtIndemQ1Comment1.Fill
             Width: =1002
-            X: =213
-            Y: =67
+            X: =150
+            Y: =308
             ZIndex: =20
 
         TxtIndemQ2Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.IndemnityQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtIndemQ2Comment1.BorderColor
-            Height: =37
+            Height: =23
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtIndemQ2Comment1.HoverBorderColor
             PressedColor: =TxtIndemQ2Comment1.Color
             PressedFill: =TxtIndemQ2Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =340
+            Width: =28
+            X: =958
+            Y: =447
             ZIndex: =21
 
         TxtIndemQ3Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.IndemnityQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtIndemQ3Comment1.BorderColor
-            Height: =37
+            Height: =33
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtIndemQ3Comment1.HoverBorderColor
             PressedColor: =TxtIndemQ3Comment1.Color
             PressedFill: =TxtIndemQ3Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =435
+            Width: =45
+            X: =1215
+            Y: =439
             ZIndex: =22
 
         UpdateIcon_2 As icon.Save:
@@ -1719,14 +1829,15 @@ Screen1 As screen:
             PressedColor: =LblIndemQ1Comment5.Color
             PressedFill: =LblIndemQ1Comment5.Fill
             Size: =14
-            Text: ="If no to above, onshore to check"
+            Text: ="Has cover been explained to customer?"
             VerticalAlign: =VerticalAlign.Top
             Width: =630
             X: =94
-            Y: =215
+            Y: =234
             ZIndex: =25
 
         Title2_25 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_25.BorderColor
             Height: =25
             HoverBorderColor: =Title2_25.BorderColor
@@ -1744,9 +1855,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =250
+            Width: =90
+            X: =666
+            Y: =453
             ZIndex: =26
 
         Cmb_IndemQ5 As combobox:
@@ -1778,29 +1889,30 @@ Screen1 As screen:
             SelectionTagFill: =Cmb_IndemQ5.HoverFill
             SelectMultiple: =false
             Width: =443
-            X: =772
-            Y: =204
+            X: =808
+            Y: =222
             ZIndex: =27
 
         TxtIndemQ1Comment5 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.IndemnityQ5Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtIndemQ1Comment5.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtIndemQ1Comment5.HoverBorderColor
             PressedColor: =TxtIndemQ1Comment5.Color
             PressedFill: =TxtIndemQ1Comment5.Fill
-            Width: =1002
-            X: =213
-            Y: =250
+            Width: =44
+            X: =762
+            Y: =447
             ZIndex: =28
 
         LblIndemQ1Comment4 As label:
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderColor: =LblIndemQ1Comment4.BorderColor
-            Height: =24
+            Height: =33
             HoverBorderColor: =LblIndemQ1Comment4.BorderColor
             HoverColor: =LblIndemQ1Comment4.Color
             HoverFill: =LblIndemQ1Comment4.Fill
@@ -1813,14 +1925,15 @@ Screen1 As screen:
             PressedColor: =LblIndemQ1Comment4.Color
             PressedFill: =LblIndemQ1Comment4.Fill
             Size: =14
-            Text: ="Has indemnity decision screen on CC10 been updated within timeframe?"
+            Text: ="Has indemnity decision been communicated to customer within time frames?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =660
-            X: =94
-            Y: =122
+            Width: =762
+            X: =88
+            Y: =136
             ZIndex: =29
 
         Title2_26 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_26.BorderColor
             Height: =25
             HoverBorderColor: =Title2_26.BorderColor
@@ -1839,8 +1952,8 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =157
+            X: =453
+            Y: =460
             ZIndex: =30
 
         Cmb_IndemQ4 As combobox:
@@ -1872,23 +1985,24 @@ Screen1 As screen:
             SelectionTagFill: =Cmb_IndemQ4.HoverFill
             SelectMultiple: =false
             Width: =443
-            X: =772
-            Y: =111
+            X: =806
+            Y: =127
             ZIndex: =31
 
         TxtIndemQ1Comment4 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.Indemnityq4Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtIndemQ1Comment4.BorderColor
-            Height: =37
+            Height: =22
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtIndemQ1Comment4.HoverBorderColor
             PressedColor: =TxtIndemQ1Comment4.Color
             PressedFill: =TxtIndemQ1Comment4.Fill
-            Width: =1002
-            X: =213
-            Y: =157
+            Width: =24
+            X: =559
+            Y: =454
             ZIndex: =32
 
     Image1 As image:
@@ -1937,12 +2051,12 @@ Screen1 As screen:
             PressedBorderColor: =LblFMQ1Comment2.BorderColor
             PressedColor: =LblFMQ1Comment2.Color
             PressedFill: =LblFMQ1Comment2.Fill
-            Size: =12
-            Text: ="Has high risk claim (ie incurred = 250K) matter been referred within timeframe for approval?"
+            Size: =10
+            Text: ="Has claim been managed within delegated authority & correct procedure followed?"
             VerticalAlign: =VerticalAlign.Top
             Width: =865
-            X: =88
-            Y: =33
+            X: =98
+            Y: =28
             ZIndex: =2
 
         Separator2_3 As rectangle:
@@ -1970,13 +2084,13 @@ Screen1 As screen:
             PressedBorderColor: =Title2_28.BorderColor
             PressedColor: =Title2_28.Color
             PressedFill: =Title2_28.Fill
-            Size: =12
+            Size: =10
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =112
-            Y: =62
+            X: =778
+            Y: =25
             ZIndex: =6
 
         Title2_22 As label:
@@ -1994,7 +2108,7 @@ Screen1 As screen:
             PressedColor: =Title2_22.Color
             PressedFill: =Title2_22.Fill
             Size: =14
-            Text: ="File Management 15%"
+            Text: ="File Management"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
@@ -2016,15 +2130,16 @@ Screen1 As screen:
             PressedBorderColor: =LblFMQ2Comment2.BorderColor
             PressedColor: =LblFMQ2Comment2.Color
             PressedFill: =LblFMQ2Comment2.Fill
-            Size: =12
-            Text: ="If gross incurred is $250K or over, has the estimate been approved by a manager"
+            Size: =10
+            Text: ="Was investigation initiated in a timely and appropriate manner?"
             VerticalAlign: =VerticalAlign.Top
             Width: =976
-            X: =94
-            Y: =93
+            X: =98
+            Y: =66
             ZIndex: =9
 
         Title2_30 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_30.BorderColor
             Height: =25
             HoverBorderColor: =Title2_30.BorderColor
@@ -2038,13 +2153,13 @@ Screen1 As screen:
             PressedBorderColor: =Title2_30.BorderColor
             PressedColor: =Title2_30.Color
             PressedFill: =Title2_30.Fill
-            Size: =12
+            Size: =10
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =126
+            X: =1028
+            Y: =314
             ZIndex: =11
 
         LblFMQ3Comment2 As label:
@@ -2061,15 +2176,16 @@ Screen1 As screen:
             PressedBorderColor: =LblFMQ3Comment2.BorderColor
             PressedColor: =LblFMQ3Comment2.Color
             PressedFill: =LblFMQ3Comment2.Fill
-            Size: =12
-            Text: ="Has case plan been created within 45 working days of notification to Guild "
+            Size: =10
+            Text: ="Was customer kept informed of progress of claim (at least every 20 days)?"
             VerticalAlign: =VerticalAlign.Top
             Width: =958
-            X: =94
-            Y: =160
+            X: =98
+            Y: =103
             ZIndex: =13
 
         Title2_32 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_32.BorderColor
             Height: =25
             HoverBorderColor: =Title2_32.BorderColor
@@ -2083,13 +2199,13 @@ Screen1 As screen:
             PressedBorderColor: =Title2_32.BorderColor
             PressedColor: =Title2_32.Color
             PressedFill: =Title2_32.Fill
-            Size: =12
+            Size: =10
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =195
+            X: =1026
+            Y: =348
             ZIndex: =15
 
         CMB_FMQ1 As combobox:
@@ -2101,7 +2217,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CMB_FMQ1.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =ColorFade(CMB_FMQ1.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CMB_FMQ1.ChevronBackground
@@ -2119,10 +2235,10 @@ Screen1 As screen:
             SelectionTagColor: =CMB_FMQ1.HoverColor
             SelectionTagFill: =CMB_FMQ1.HoverFill
             SelectMultiple: =false
-            Size: =12
-            Width: =145
-            X: =1070
-            Y: =31
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =27
             ZIndex: =17
 
         CMB_FMQ2 As combobox:
@@ -2134,7 +2250,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CMB_FMQ2.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =ColorFade(CMB_FMQ2.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CMB_FMQ2.ChevronBackground
@@ -2149,10 +2265,10 @@ Screen1 As screen:
             SelectionTagColor: =CMB_FMQ2.HoverColor
             SelectionTagFill: =CMB_FMQ2.HoverFill
             SelectMultiple: =false
-            Size: =12
-            Width: =145
-            X: =1070
-            Y: =95
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =66
             ZIndex: =18
 
         CMB_FMQ3 As combobox:
@@ -2164,7 +2280,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CMB_FMQ3.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =ColorFade(CMB_FMQ3.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CMB_FMQ3.ChevronBackground
@@ -2178,10 +2294,10 @@ Screen1 As screen:
             SelectionTagColor: =CMB_FMQ3.HoverColor
             SelectionTagFill: =CMB_FMQ3.HoverFill
             SelectMultiple: =false
-            Size: =12
-            Width: =145
-            X: =1070
-            Y: =160
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =103
             ZIndex: =19
 
         TxtFMComment1 As text:
@@ -2189,21 +2305,23 @@ Screen1 As screen:
             Default: =ThisItem.FMQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtFMComment1.BorderColor
-            Height: =25
+            Height: =239
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtFMComment1.HoverBorderColor
             PressedColor: =TxtFMComment1.Color
             PressedFill: =TxtFMComment1.Fill
             Size: =12
-            Width: =1002
-            X: =207
-            Y: =62
+            Width: =414
+            X: =801
+            Y: =51
             ZIndex: =20
 
         TxtFMComment2 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(255, 0, 0, 1)
             Default: =ThisItem.FMQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtFMComment2.BorderColor
             Height: =25
             OnSelect: =Select(Parent)
@@ -2211,25 +2329,27 @@ Screen1 As screen:
             PressedColor: =TxtFMComment2.Color
             PressedFill: =TxtFMComment2.Fill
             Size: =12
-            Width: =1002
-            X: =213
-            Y: =126
+            Width: =93
+            X: =1164
+            Y: =308
             ZIndex: =21
 
         TxtFMComment3 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(255, 0, 0, 1)
             Default: =ThisItem.FMQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtFMComment3.BorderColor
-            Height: =25
+            Height: =26
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtFMComment3.HoverBorderColor
             PressedColor: =TxtFMComment3.Color
             PressedFill: =TxtFMComment3.Fill
             Size: =12
-            Width: =1002
-            X: =213
-            Y: =195
+            Width: =170
+            X: =1101
+            Y: =342
             ZIndex: =22
 
         LblFMQ4Comment2 As label:
@@ -2247,7 +2367,7 @@ Screen1 As screen:
             PressedColor: =LblFMQ4Comment2.Color
             PressedFill: =LblFMQ4Comment2.Fill
             Size: =14
-            Text: ="Are file notes present, adequate and provide appropriate insight into the progress and status of the claim ?"
+            Text: ="Has the Communication Matrix been followed if applicable?"
             VerticalAlign: =VerticalAlign.Top
             Visible: =false
             Width: =976
@@ -2339,15 +2459,16 @@ Screen1 As screen:
             PressedBorderColor: =LblFMQ5Comment2.BorderColor
             PressedColor: =LblFMQ5Comment2.Color
             PressedFill: =LblFMQ5Comment2.Fill
-            Size: =12
-            Text: ="Have file notes of meetings been documented? Have emails been attached to the file within 1 day of being received ? "
+            Size: =10
+            Text: ="Are file notes adequate and appropriate templates used?"
             VerticalAlign: =VerticalAlign.Top
             Width: =928
-            X: =94
-            Y: =226
+            X: =98
+            Y: =145
             ZIndex: =27
 
         Title2_36 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_36.BorderColor
             Height: =25
             HoverBorderColor: =Title2_36.BorderColor
@@ -2361,13 +2482,13 @@ Screen1 As screen:
             PressedBorderColor: =Title2_36.BorderColor
             PressedColor: =Title2_36.Color
             PressedFill: =Title2_36.Fill
-            Size: =12
+            Size: =10
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =260
+            X: =1096
+            Y: =381
             ZIndex: =28
 
         CMB_FMQ5 As combobox:
@@ -2379,7 +2500,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CMB_FMQ5.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =ColorFade(CMB_FMQ5.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CMB_FMQ5.ChevronBackground
@@ -2397,26 +2518,28 @@ Screen1 As screen:
             SelectionTagColor: =CMB_FMQ5.HoverColor
             SelectionTagFill: =CMB_FMQ5.HoverFill
             SelectMultiple: =false
-            Size: =12
-            Width: =145
-            X: =1070
-            Y: =226
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =140
             ZIndex: =29
 
         TxtFMComment5 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(255, 0, 0, 1)
             Default: =ThisItem.FMQ5Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtFMComment5.BorderColor
-            Height: =25
+            Height: =22
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtFMComment5.HoverBorderColor
             PressedColor: =TxtFMComment5.Color
             PressedFill: =TxtFMComment5.Fill
             Size: =12
-            Width: =1002
-            X: =213
-            Y: =260
+            Width: =73
+            X: =1191
+            Y: =380
             ZIndex: =30
 
         UpdateIconFM As icon.Save:
@@ -2543,7 +2666,7 @@ Screen1 As screen:
         LblFMQ6Comment2 As label:
             Fill: =RGBA(127, 178, 57, 1)
             FocusedBorderColor: =LblFMQ6Comment2.BorderColor
-            Height: =24
+            Height: =27
             HoverBorderColor: =LblFMQ6Comment2.BorderColor
             HoverColor: =LblFMQ6Comment2.Color
             HoverFill: =LblFMQ6Comment2.Fill
@@ -2555,15 +2678,16 @@ Screen1 As screen:
             PressedBorderColor: =LblFMQ6Comment2.BorderColor
             PressedColor: =LblFMQ6Comment2.Color
             PressedFill: =LblFMQ6Comment2.Fill
-            Size: =12
-            Text: ="Are file notes present, adequate and provide appropriate insight into the progress and status of the claim ?"
+            Size: =10
+            Text: ="Has the Communication Matrix been followed if applicable?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =298
+            Width: =404
+            X: =98
+            Y: =181
             ZIndex: =33
 
         Title2_31 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_31.BorderColor
             Height: =25
             HoverBorderColor: =Title2_31.BorderColor
@@ -2577,13 +2701,13 @@ Screen1 As screen:
             PressedBorderColor: =Title2_31.BorderColor
             PressedColor: =Title2_31.Color
             PressedFill: =Title2_31.Fill
-            Size: =12
+            Size: =10
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =331
+            X: =1096
+            Y: =420
             ZIndex: =34
 
         LblFMQ7Comment2 As label:
@@ -2600,15 +2724,16 @@ Screen1 As screen:
             PressedBorderColor: =LblFMQ7Comment2.BorderColor
             PressedColor: =LblFMQ7Comment2.Color
             PressedFill: =LblFMQ7Comment2.Fill
-            Size: =12
-            Text: ="Is the reason for the liability position/decision clear from the file  "
+            Size: =10
+            Text: ="Has Intro call been made?"
             VerticalAlign: =VerticalAlign.Top
             Width: =958
-            X: =94
-            Y: =365
+            X: =98
+            Y: =220
             ZIndex: =35
 
         Title2_33 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_33.BorderColor
             Height: =25
             HoverBorderColor: =Title2_33.BorderColor
@@ -2622,13 +2747,13 @@ Screen1 As screen:
             PressedBorderColor: =Title2_33.BorderColor
             PressedColor: =Title2_33.Color
             PressedFill: =Title2_33.Fill
-            Size: =12
+            Size: =10
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =400
+            X: =1111
+            Y: =446
             ZIndex: =36
 
         CMB_FMQ6 As combobox:
@@ -2640,7 +2765,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CMB_FMQ6.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =ColorFade(CMB_FMQ6.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CMB_FMQ6.ChevronBackground
@@ -2655,10 +2780,10 @@ Screen1 As screen:
             SelectionTagColor: =CMB_FMQ6.HoverColor
             SelectionTagFill: =CMB_FMQ6.HoverFill
             SelectMultiple: =false
-            Size: =12
-            Width: =145
-            X: =1070
-            Y: =300
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =177
             ZIndex: =37
 
         CMB_FMQ7 As combobox:
@@ -2670,7 +2795,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CMB_FMQ7.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =ColorFade(CMB_FMQ7.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CMB_FMQ7.ChevronBackground
@@ -2684,42 +2809,46 @@ Screen1 As screen:
             SelectionTagColor: =CMB_FMQ7.HoverColor
             SelectionTagFill: =CMB_FMQ7.HoverFill
             SelectMultiple: =false
-            Size: =12
-            Width: =145
-            X: =1070
-            Y: =365
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =215
             ZIndex: =38
 
         TxtFMComment6 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(255, 0, 0, 1)
             Default: =ThisItem.FMQ6Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtFMComment6.BorderColor
-            Height: =25
+            Height: =22
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtFMComment6.HoverBorderColor
             PressedColor: =TxtFMComment6.Color
             PressedFill: =TxtFMComment6.Fill
             Size: =12
-            Width: =1002
-            X: =213
-            Y: =331
+            Width: =117
+            X: =1154
+            Y: =411
             ZIndex: =39
 
         TxtFMComment7 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(255, 0, 0, 1)
             Default: =ThisItem.FMQ7Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtFMComment7.BorderColor
-            Height: =25
+            Height: =18
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtFMComment7.HoverBorderColor
             PressedColor: =TxtFMComment7.Color
             PressedFill: =TxtFMComment7.Fill
             Size: =12
-            Width: =1002
-            X: =213
-            Y: =400
+            Width: =73
+            X: =1198
+            Y: =440
             ZIndex: =40
 
         LblFMQ8Comment2 As label:
@@ -2749,15 +2878,16 @@ Screen1 As screen:
             PressedBorderColor: =LblFMQ8Comment2.BorderColor
             PressedColor: =LblFMQ8Comment2.Color
             PressedFill: =LblFMQ8Comment2.Fill
-            Size: =12
+            Size: =10
             Text: ="Has the claims been closed at an apporpriate stage and in a timely manner ? "
             VerticalAlign: =VerticalAlign.Top
             Width: =928
-            X: =94
-            Y: =431
+            X: =98
+            Y: =255
             ZIndex: =41
 
         Title2_38 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_38.BorderColor
             Height: =25
             HoverBorderColor: =Title2_38.BorderColor
@@ -2771,13 +2901,13 @@ Screen1 As screen:
             PressedBorderColor: =Title2_38.BorderColor
             PressedColor: =Title2_38.Color
             PressedFill: =Title2_38.Fill
-            Size: =12
+            Size: =10
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =465
+            X: =1096
+            Y: =473
             ZIndex: =42
 
         CMB_FMQ8 As combobox:
@@ -2789,7 +2919,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CMB_FMQ8.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =ColorFade(CMB_FMQ8.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CMB_FMQ8.ChevronBackground
@@ -2807,27 +2937,374 @@ Screen1 As screen:
             SelectionTagColor: =CMB_FMQ8.HoverColor
             SelectionTagFill: =CMB_FMQ8.HoverFill
             SelectMultiple: =false
-            Size: =12
-            Width: =145
-            X: =1070
-            Y: =431
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =253
             ZIndex: =43
 
         TxtFMComment8 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(255, 0, 0, 1)
             Default: =ThisItem.FMQ8Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtFMComment8.BorderColor
-            Height: =25
+            Height: =22
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtFMComment8.HoverBorderColor
             PressedColor: =TxtFMComment8.Color
             PressedFill: =TxtFMComment8.Fill
             Size: =12
-            Width: =1002
-            X: =213
-            Y: =465
+            Width: =58
+            X: =1199
+            Y: =473
             ZIndex: =44
+
+        LblFMQ9Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblFMQ9Comment2.BorderColor
+            Height: =35
+            HoverBorderColor: =LblFMQ9Comment2.BorderColor
+            HoverColor: =LblFMQ9Comment2.Color
+            HoverFill: =LblFMQ9Comment2.Fill
+            OnSelect: |-
+                =
+                // Flow that will update FM section//
+                QACriteria_UpdateFM.Run(Value(ThisItem.ID),ThisItem.Title,CMB_FMQ1.Selected.Score,If(Len(TxtFMComment1.Text)<1,"-",TxtFMComment1.Text),LblFMQ1Comment2.Text, CMB_FMQ2.Selected.Score,If(Len(TxtFMComment2.Text)<1,"-",TxtFMComment2.Text),LblFMQ2Comment2.Text, 
+                CMB_FMQ3.Selected.Score,If(Len(TxtFMComment3.Text)<1,"-",TxtFMComment3.Text),LblFMQ3Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment4.Text)<1,"-",TxtFMComment4.Text),LblFMQ4Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment5.Text)<1,"-",TxtFMComment5.Text),LblFMQ5Comment2.Text,
+                CMB_FMQ6.Selected.Score, If(Len(TxtFMComment6.Text)<1,"-",TxtFMComment6.Text),LblFMQ6Comment2.Text,
+                CMB_FMQ7.Selected.Score, If(Len(TxtFMComment7.Text)<1,"-",TxtFMComment7.Text),LblFMQ7Comment2.Text,
+                CMB_FMQ8.Selected.Score, If(Len(TxtFMComment8.Text)<1,"-",TxtFMComment8.Text),LblFMQ9Comment2.Text,
+                VarFMQ1Points,VarFMQ2Points,VarFMQ3Points,VarFMQ4Points,VarFMQ5Points,VarFMQ6Points,VarFMQ7Points,VarFMQ8Points);
+                Select(CalcButton2);
+                Refresh(QACheckList);
+                UpdateContext({msgsavedtag:true});
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblFMQ9Comment2.BorderColor
+            PressedColor: =LblFMQ9Comment2.Color
+            PressedFill: =LblFMQ9Comment2.Fill
+            Size: =10
+            Text: ="Has technical referral template been completed for all referrals?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =928
+            X: =100
+            Y: =300
+            ZIndex: =45
+
+        CMB_FMQ9 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.FMQ8)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CMB_FMQ9.BorderColor
+            Height: =19
+            HoverBorderColor: =ColorFade(CMB_FMQ9.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CMB_FMQ9.ChevronBackground
+            OnChange: |+
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { FMQ5: CMB_FMQ5.Selected.Score}, { FMQ5Points: If(CMB_FMQ5.Selected.Score = "Yes",3,If(CMB_FMQ5.Selected.Score = "No",0 ,If(CMB_FMQ5.Selected.Score = "Partial",1.5,If(CMB_FMQ5.Selected.Score = "NA",3))))} );
+                
+                Set(VarFMQ8Points, If(CMB_FMQ9.Selected.Score = "Yes",3,If(CMB_FMQ9.Selected.Score = "No",0 ,If(CMB_FMQ9.Selected.Score = "Partial",1.5,If(CMB_FMQ9.Selected.Score = "NA",3,0)))))
+                
+                
+                
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CMB_FMQ9.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CMB_FMQ9.SearchText,"Score")
+            SelectionTagColor: =CMB_FMQ9.HoverColor
+            SelectionTagFill: =CMB_FMQ9.HoverFill
+            SelectMultiple: =false
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =295
+            ZIndex: =46
+
+        LblFMQ10Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblFMQ10Comment2.BorderColor
+            Height: =35
+            HoverBorderColor: =LblFMQ10Comment2.BorderColor
+            HoverColor: =LblFMQ10Comment2.Color
+            HoverFill: =LblFMQ10Comment2.Fill
+            OnSelect: |-
+                =
+                // Flow that will update FM section//
+                QACriteria_UpdateFM.Run(Value(ThisItem.ID),ThisItem.Title,CMB_FMQ1.Selected.Score,If(Len(TxtFMComment1.Text)<1,"-",TxtFMComment1.Text),LblFMQ1Comment2.Text, CMB_FMQ2.Selected.Score,If(Len(TxtFMComment2.Text)<1,"-",TxtFMComment2.Text),LblFMQ2Comment2.Text, 
+                CMB_FMQ3.Selected.Score,If(Len(TxtFMComment3.Text)<1,"-",TxtFMComment3.Text),LblFMQ3Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment4.Text)<1,"-",TxtFMComment4.Text),LblFMQ4Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment5.Text)<1,"-",TxtFMComment5.Text),LblFMQ5Comment2.Text,
+                CMB_FMQ6.Selected.Score, If(Len(TxtFMComment6.Text)<1,"-",TxtFMComment6.Text),LblFMQ6Comment2.Text,
+                CMB_FMQ7.Selected.Score, If(Len(TxtFMComment7.Text)<1,"-",TxtFMComment7.Text),LblFMQ7Comment2.Text,
+                CMB_FMQ8.Selected.Score, If(Len(TxtFMComment8.Text)<1,"-",TxtFMComment8.Text),LblFMQ10Comment2.Text,
+                VarFMQ1Points,VarFMQ2Points,VarFMQ3Points,VarFMQ4Points,VarFMQ5Points,VarFMQ6Points,VarFMQ7Points,VarFMQ8Points);
+                Select(CalcButton2);
+                Refresh(QACheckList);
+                UpdateContext({msgsavedtag:true});
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblFMQ10Comment2.BorderColor
+            PressedColor: =LblFMQ10Comment2.Color
+            PressedFill: =LblFMQ10Comment2.Fill
+            Size: =10
+            Text: ="Claim closed appropriately? (call made/letter sent - nothing outstanding?)"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =928
+            X: =100
+            Y: =337
+            ZIndex: =47
+
+        CMB_FMQ10 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.FMQ8)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CMB_FMQ10.BorderColor
+            Height: =19
+            HoverBorderColor: =ColorFade(CMB_FMQ10.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CMB_FMQ10.ChevronBackground
+            OnChange: |+
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { FMQ5: CMB_FMQ5.Selected.Score}, { FMQ5Points: If(CMB_FMQ5.Selected.Score = "Yes",3,If(CMB_FMQ5.Selected.Score = "No",0 ,If(CMB_FMQ5.Selected.Score = "Partial",1.5,If(CMB_FMQ5.Selected.Score = "NA",3))))} );
+                
+                Set(VarFMQ8Points, If(CMB_FMQ10.Selected.Score = "Yes",3,If(CMB_FMQ10.Selected.Score = "No",0 ,If(CMB_FMQ10.Selected.Score = "Partial",1.5,If(CMB_FMQ10.Selected.Score = "NA",3,0)))))
+                
+                
+                
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CMB_FMQ10.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CMB_FMQ10.SearchText,"Score")
+            SelectionTagColor: =CMB_FMQ10.HoverColor
+            SelectionTagFill: =CMB_FMQ10.HoverFill
+            SelectMultiple: =false
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =335
+            ZIndex: =48
+
+        LblFMQ11Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblFMQ11Comment2.BorderColor
+            Height: =35
+            HoverBorderColor: =LblFMQ11Comment2.BorderColor
+            HoverColor: =LblFMQ11Comment2.Color
+            HoverFill: =LblFMQ11Comment2.Fill
+            OnSelect: |-
+                =
+                // Flow that will update FM section//
+                QACriteria_UpdateFM.Run(Value(ThisItem.ID),ThisItem.Title,CMB_FMQ1.Selected.Score,If(Len(TxtFMComment1.Text)<1,"-",TxtFMComment1.Text),LblFMQ1Comment2.Text, CMB_FMQ2.Selected.Score,If(Len(TxtFMComment2.Text)<1,"-",TxtFMComment2.Text),LblFMQ2Comment2.Text, 
+                CMB_FMQ3.Selected.Score,If(Len(TxtFMComment3.Text)<1,"-",TxtFMComment3.Text),LblFMQ3Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment4.Text)<1,"-",TxtFMComment4.Text),LblFMQ4Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment5.Text)<1,"-",TxtFMComment5.Text),LblFMQ5Comment2.Text,
+                CMB_FMQ6.Selected.Score, If(Len(TxtFMComment6.Text)<1,"-",TxtFMComment6.Text),LblFMQ6Comment2.Text,
+                CMB_FMQ7.Selected.Score, If(Len(TxtFMComment7.Text)<1,"-",TxtFMComment7.Text),LblFMQ7Comment2.Text,
+                CMB_FMQ8.Selected.Score, If(Len(TxtFMComment8.Text)<1,"-",TxtFMComment8.Text),LblFMQ11Comment2.Text,
+                VarFMQ1Points,VarFMQ2Points,VarFMQ3Points,VarFMQ4Points,VarFMQ5Points,VarFMQ6Points,VarFMQ7Points,VarFMQ8Points);
+                Select(CalcButton2);
+                Refresh(QACheckList);
+                UpdateContext({msgsavedtag:true});
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblFMQ11Comment2.BorderColor
+            PressedColor: =LblFMQ11Comment2.Color
+            PressedFill: =LblFMQ11Comment2.Fill
+            Size: =10
+            Text: ="Have all relevant ClaimCentre fields been adequately completed?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =928
+            X: =100
+            Y: =375
+            ZIndex: =49
+
+        CMB_FMQ11 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.FMQ8)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CMB_FMQ11.BorderColor
+            Height: =19
+            HoverBorderColor: =ColorFade(CMB_FMQ11.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CMB_FMQ11.ChevronBackground
+            OnChange: |+
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { FMQ5: CMB_FMQ5.Selected.Score}, { FMQ5Points: If(CMB_FMQ5.Selected.Score = "Yes",3,If(CMB_FMQ5.Selected.Score = "No",0 ,If(CMB_FMQ5.Selected.Score = "Partial",1.5,If(CMB_FMQ5.Selected.Score = "NA",3))))} );
+                
+                Set(VarFMQ8Points, If(CMB_FMQ11.Selected.Score = "Yes",3,If(CMB_FMQ11.Selected.Score = "No",0 ,If(CMB_FMQ11.Selected.Score = "Partial",1.5,If(CMB_FMQ11.Selected.Score = "NA",3,0)))))
+                
+                
+                
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CMB_FMQ11.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CMB_FMQ11.SearchText,"Score")
+            SelectionTagColor: =CMB_FMQ11.HoverColor
+            SelectionTagFill: =CMB_FMQ11.HoverFill
+            SelectMultiple: =false
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =375
+            ZIndex: =50
+
+        LblFMQ12Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblFMQ12Comment2.BorderColor
+            Height: =35
+            HoverBorderColor: =LblFMQ12Comment2.BorderColor
+            HoverColor: =LblFMQ12Comment2.Color
+            HoverFill: =LblFMQ12Comment2.Fill
+            OnSelect: |-
+                =
+                // Flow that will update FM section//
+                QACriteria_UpdateFM.Run(Value(ThisItem.ID),ThisItem.Title,CMB_FMQ1.Selected.Score,If(Len(TxtFMComment1.Text)<1,"-",TxtFMComment1.Text),LblFMQ1Comment2.Text, CMB_FMQ2.Selected.Score,If(Len(TxtFMComment2.Text)<1,"-",TxtFMComment2.Text),LblFMQ2Comment2.Text, 
+                CMB_FMQ3.Selected.Score,If(Len(TxtFMComment3.Text)<1,"-",TxtFMComment3.Text),LblFMQ3Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment4.Text)<1,"-",TxtFMComment4.Text),LblFMQ4Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment5.Text)<1,"-",TxtFMComment5.Text),LblFMQ5Comment2.Text,
+                CMB_FMQ6.Selected.Score, If(Len(TxtFMComment6.Text)<1,"-",TxtFMComment6.Text),LblFMQ6Comment2.Text,
+                CMB_FMQ7.Selected.Score, If(Len(TxtFMComment7.Text)<1,"-",TxtFMComment7.Text),LblFMQ7Comment2.Text,
+                CMB_FMQ8.Selected.Score, If(Len(TxtFMComment8.Text)<1,"-",TxtFMComment8.Text),LblFMQ12Comment2.Text,
+                VarFMQ1Points,VarFMQ2Points,VarFMQ3Points,VarFMQ4Points,VarFMQ5Points,VarFMQ6Points,VarFMQ7Points,VarFMQ8Points);
+                Select(CalcButton2);
+                Refresh(QACheckList);
+                UpdateContext({msgsavedtag:true});
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblFMQ12Comment2.BorderColor
+            PressedColor: =LblFMQ12Comment2.Color
+            PressedFill: =LblFMQ12Comment2.Fill
+            Size: =10
+            Text: ="Was claim identified as fast track claim and process followed?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =928
+            X: =100
+            Y: =415
+            ZIndex: =51
+
+        CMB_FMQ11_1 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.FMQ8)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CMB_FMQ11_1.BorderColor
+            Height: =19
+            HoverBorderColor: =ColorFade(CMB_FMQ11_1.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CMB_FMQ11_1.ChevronBackground
+            OnChange: |+
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { FMQ5: CMB_FMQ5.Selected.Score}, { FMQ5Points: If(CMB_FMQ5.Selected.Score = "Yes",3,If(CMB_FMQ5.Selected.Score = "No",0 ,If(CMB_FMQ5.Selected.Score = "Partial",1.5,If(CMB_FMQ5.Selected.Score = "NA",3))))} );
+                
+                Set(VarFMQ8Points, If(CMB_FMQ11_1.Selected.Score = "Yes",3,If(CMB_FMQ11_1.Selected.Score = "No",0 ,If(CMB_FMQ11_1.Selected.Score = "Partial",1.5,If(CMB_FMQ11_1.Selected.Score = "NA",3,0)))))
+                
+                
+                
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CMB_FMQ11_1.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CMB_FMQ11_1.SearchText,"Score")
+            SelectionTagColor: =CMB_FMQ11_1.HoverColor
+            SelectionTagFill: =CMB_FMQ11_1.HoverFill
+            SelectMultiple: =false
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =410
+            ZIndex: =52
+
+        LblFMQ13Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblFMQ13Comment2.BorderColor
+            Height: =35
+            HoverBorderColor: =LblFMQ13Comment2.BorderColor
+            HoverColor: =LblFMQ13Comment2.Color
+            HoverFill: =LblFMQ13Comment2.Fill
+            OnSelect: |-
+                =
+                // Flow that will update FM section//
+                QACriteria_UpdateFM.Run(Value(ThisItem.ID),ThisItem.Title,CMB_FMQ1.Selected.Score,If(Len(TxtFMComment1.Text)<1,"-",TxtFMComment1.Text),LblFMQ1Comment2.Text, CMB_FMQ2.Selected.Score,If(Len(TxtFMComment2.Text)<1,"-",TxtFMComment2.Text),LblFMQ2Comment2.Text, 
+                CMB_FMQ3.Selected.Score,If(Len(TxtFMComment3.Text)<1,"-",TxtFMComment3.Text),LblFMQ3Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment4.Text)<1,"-",TxtFMComment4.Text),LblFMQ4Comment2.Text,
+                CMB_FMQ5.Selected.Score, If(Len(TxtFMComment5.Text)<1,"-",TxtFMComment5.Text),LblFMQ5Comment2.Text,
+                CMB_FMQ6.Selected.Score, If(Len(TxtFMComment6.Text)<1,"-",TxtFMComment6.Text),LblFMQ6Comment2.Text,
+                CMB_FMQ7.Selected.Score, If(Len(TxtFMComment7.Text)<1,"-",TxtFMComment7.Text),LblFMQ7Comment2.Text,
+                CMB_FMQ8.Selected.Score, If(Len(TxtFMComment8.Text)<1,"-",TxtFMComment8.Text),LblFMQ13Comment2.Text,
+                VarFMQ1Points,VarFMQ2Points,VarFMQ3Points,VarFMQ4Points,VarFMQ5Points,VarFMQ6Points,VarFMQ7Points,VarFMQ8Points);
+                Select(CalcButton2);
+                Refresh(QACheckList);
+                UpdateContext({msgsavedtag:true});
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblFMQ13Comment2.BorderColor
+            PressedColor: =LblFMQ13Comment2.Color
+            PressedFill: =LblFMQ13Comment2.Fill
+            Size: =10
+            Text: ="Has claim been proactively managed? (follow ups rather than a wait approach)"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =928
+            X: =98
+            Y: =450
+            ZIndex: =53
+
+        CMB_FMQ11_2 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.FMQ8)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CMB_FMQ11_2.BorderColor
+            Height: =19
+            HoverBorderColor: =ColorFade(CMB_FMQ11_2.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CMB_FMQ11_2.ChevronBackground
+            OnChange: |+
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { FMQ5: CMB_FMQ5.Selected.Score}, { FMQ5Points: If(CMB_FMQ5.Selected.Score = "Yes",3,If(CMB_FMQ5.Selected.Score = "No",0 ,If(CMB_FMQ5.Selected.Score = "Partial",1.5,If(CMB_FMQ5.Selected.Score = "NA",3))))} );
+                
+                Set(VarFMQ8Points, If(CMB_FMQ11_2.Selected.Score = "Yes",3,If(CMB_FMQ11_2.Selected.Score = "No",0 ,If(CMB_FMQ11_2.Selected.Score = "Partial",1.5,If(CMB_FMQ11_2.Selected.Score = "NA",3,0)))))
+                
+                
+                
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CMB_FMQ11_2.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CMB_FMQ11_2.SearchText,"Score")
+            SelectionTagColor: =CMB_FMQ11_2.HoverColor
+            SelectionTagFill: =CMB_FMQ11_2.HoverFill
+            SelectMultiple: =false
+            Size: =10
+            Width: =113
+            X: =643
+            Y: =446
+            ZIndex: =54
 
     "GalleryCS As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderStyle: =BorderStyle.None
@@ -2863,12 +3340,12 @@ Screen1 As screen:
             PressedBorderColor: =LblCSQ1Comment2.BorderColor
             PressedColor: =LblCSQ1Comment2.Color
             PressedFill: =LblCSQ1Comment2.Fill
-            Size: =14
-            Text: ="Has claim been lodged and initial contact made by claims specialist/ML within appropriate timeframes?"
+            Size: =12
+            Text: ="Has payment been made within appropriate timeframes?"
             VerticalAlign: =VerticalAlign.Top
             Width: =1000
-            X: =96
-            Y: =59
+            X: =112
+            Y: =48
             ZIndex: =2
 
         Separator2_4 As rectangle:
@@ -2898,11 +3375,11 @@ Screen1 As screen:
             PressedFill: =Title2_39.Fill
             Size: =12
             Text: |-
-                ="Comment:"
+                ="Comments:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =120
-            Y: =94
+            X: =789
+            Y: =53
             ZIndex: =6
 
         Title2_37 As label:
@@ -2920,7 +3397,7 @@ Screen1 As screen:
             PressedColor: =Title2_37.Color
             PressedFill: =Title2_37.Fill
             Size: =18
-            Text: ="Customer Experience 10%"
+            Text: ="Financial Management"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
@@ -2940,15 +3417,16 @@ Screen1 As screen:
             PressedBorderColor: =LblCSQ2Comment2.BorderColor
             PressedColor: =LblCSQ2Comment2.Color
             PressedFill: =LblCSQ2Comment2.Fill
-            Size: =14
-            Text: ="Were queries from the customer deal with in a timely and helpful manner ?"
+            Size: =12
+            Text: ="Has payment been made correctly?"
             VerticalAlign: =VerticalAlign.Top
             Width: =976
-            X: =96
-            Y: =145
+            X: =112
+            Y: =104
             ZIndex: =9
 
         Title2_41 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_41.BorderColor
             Height: =25
             HoverBorderColor: =Title2_41.BorderColor
@@ -2967,14 +3445,14 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =120
-            Y: =184
+            X: =153
+            Y: =459
             ZIndex: =11
 
         LblCSQ3Comment2 As label:
             Fill: =RGBA(255, 255, 0, 1)
             FocusedBorderColor: =LblCSQ3Comment2.BorderColor
-            Height: =24
+            Height: =42
             HoverBorderColor: =LblCSQ3Comment2.BorderColor
             HoverColor: =LblCSQ3Comment2.Color
             HoverFill: =LblCSQ3Comment2.Fill
@@ -2986,15 +3464,16 @@ Screen1 As screen:
             PressedBorderColor: =LblCSQ3Comment2.BorderColor
             PressedColor: =LblCSQ3Comment2.Color
             PressedFill: =LblCSQ3Comment2.Fill
-            Size: =14
-            Text: ="Was customer kept informed of progress of claim including result and closure?"
+            Size: =12
+            Text: ="Has the correct excess been applied (Have all sums insured and sub limits been considered) ?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =958
-            X: =96
-            Y: =350
+            Width: =444
+            X: =112
+            Y: =212
             ZIndex: =13
 
         Title2_43 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_43.BorderColor
             Height: =25
             HoverBorderColor: =Title2_43.BorderColor
@@ -3012,9 +3491,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =120
-            Y: =394
+            Width: =72
+            X: =472
+            Y: =459
             ZIndex: =15
 
         CmbCSQ1 As combobox:
@@ -3041,9 +3520,10 @@ Screen1 As screen:
             SelectionTagColor: =CmbCSQ1.HoverColor
             SelectionTagFill: =CmbCSQ1.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =48
+            X: =590
+            Y: =37
             ZIndex: =17
 
         CmbCSQ2 As combobox:
@@ -3070,9 +3550,10 @@ Screen1 As screen:
             SelectionTagColor: =CmbCSQ2.HoverColor
             SelectionTagFill: =CmbCSQ2.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =141
+            X: =590
+            Y: =90
             ZIndex: =18
 
         CmbCSQ3 As combobox:
@@ -3100,9 +3581,10 @@ Screen1 As screen:
             SelectionTagColor: =CmbCSQ3.HoverColor
             SelectionTagFill: =CmbCSQ3.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =344
+            X: =590
+            Y: =212
             ZIndex: =19
 
         TxtCSQ1Comment1 As text:
@@ -3110,44 +3592,49 @@ Screen1 As screen:
             Default: =ThisItem.CSQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtCSQ1Comment1.BorderColor
-            Height: =37
+            Height: =309
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCSQ1Comment1.HoverBorderColor
             PressedColor: =TxtCSQ1Comment1.Color
             PressedFill: =TxtCSQ1Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =94
+            Size: =12
+            Width: =395
+            X: =828
+            Y: =108
             ZIndex: =20
 
         TxtCSQ2Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CSQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCSQ2Comment1.BorderColor
-            Height: =37
+            Height: =31
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCSQ2Comment1.HoverBorderColor
             PressedColor: =TxtCSQ2Comment1.Color
             PressedFill: =TxtCSQ2Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =184
+            Size: =12
+            Width: =37
+            X: =234
+            Y: =452
             ZIndex: =21
 
         TxtCSQ3Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CSQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCSQ3Comment1.BorderColor
-            Height: =37
+            Height: =23
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCSQ3Comment1.HoverBorderColor
             PressedColor: =TxtCSQ3Comment1.Color
             PressedFill: =TxtCSQ3Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =394
+            Size: =12
+            Width: =19
+            X: =544
+            Y: =461
             ZIndex: =22
 
         UpdateIconFM_1 As icon.Save:
@@ -3244,7 +3731,7 @@ Screen1 As screen:
         LblCSQ4Comment2 As label:
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderColor: =LblCSQ4Comment2.BorderColor
-            Height: =24
+            Height: =49
             HoverBorderColor: =LblCSQ4Comment2.BorderColor
             HoverColor: =LblCSQ4Comment2.Color
             HoverFill: =LblCSQ4Comment2.Fill
@@ -3256,15 +3743,16 @@ Screen1 As screen:
             PressedBorderColor: =LblCSQ4Comment2.BorderColor
             PressedColor: =LblCSQ4Comment2.Color
             PressedFill: =LblCSQ4Comment2.Fill
-            Size: =14
-            Text: ="Have forward activities been created on the file every 3 months?"
+            Size: =12
+            Text: ="Has ITC status and  percentage been completed in Claim Centre and appropriately considered in settlement?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =958
-            X: =96
-            Y: =247
+            Width: =444
+            X: =112
+            Y: =149
             ZIndex: =25
 
         Title2_45 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_45.BorderColor
             Height: =25
             HoverBorderColor: =Title2_45.BorderColor
@@ -3282,9 +3770,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =120
-            Y: =291
+            Width: =81
+            X: =307
+            Y: =459
             ZIndex: =26
 
         CmbCSQ4 As combobox:
@@ -3312,25 +3800,136 @@ Screen1 As screen:
             SelectionTagColor: =CmbCSQ4.HoverColor
             SelectionTagFill: =CmbCSQ4.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =241
+            X: =590
+            Y: =149
             ZIndex: =27
 
         TxtCSQ4Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CSQ4Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCSQ4Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCSQ4Comment1.HoverBorderColor
             PressedColor: =TxtCSQ4Comment1.Color
             PressedFill: =TxtCSQ4Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =291
+            Size: =12
+            Width: =32
+            X: =388
+            Y: =453
             ZIndex: =28
+
+        LblCSQ5Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblCSQ5Comment2.BorderColor
+            Height: =42
+            HoverBorderColor: =LblCSQ5Comment2.BorderColor
+            HoverColor: =LblCSQ5Comment2.Color
+            HoverFill: =LblCSQ5Comment2.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblCSQ5Comment2.BorderColor
+            PressedColor: =LblCSQ5Comment2.Color
+            PressedFill: =LblCSQ5Comment2.Fill
+            Size: =12
+            Text: ="Is there approved proof of ownership/photos or detailed file note justifying payment on file?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =444
+            X: =112
+            Y: =283
+            ZIndex: =29
+
+        CmbCSQ5 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.CSQ3)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CmbCSQ5.BorderColor
+            Height: =35
+            HoverBorderColor: =ColorFade(CmbCSQ5.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CmbCSQ5.ChevronBackground
+            OnChange: |-
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { CSQ3: CmbCSQ3.Selected.Score}, { CSQ3Points: If(CmbCSQ3.Selected.Score = "Yes",3,If(CmbCSQ3.Selected.Score = "No",0 ,If(CmbCSQ3.Selected.Score = "Partial",1.5,If(CmbCSQ3.Selected.Score = "NA",3))))} )
+                
+                
+                Set(VarCSQ3Points, If(CmbCSQ5.Selected.Score = "Yes",3,If(CmbCSQ5.Selected.Score = "No",0 ,If(CmbCSQ5.Selected.Score = "Partial",1.5,If(CmbCSQ5.Selected.Score = "NA",3,0)))))
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CmbCSQ5.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CmbCSQ5.SearchText,"Score")
+            SelectionTagColor: =CmbCSQ5.HoverColor
+            SelectionTagFill: =CmbCSQ5.HoverFill
+            SelectMultiple: =false
+            Size: =12
+            Width: =145
+            X: =590
+            Y: =283
+            ZIndex: =30
+
+        LblCSQ6Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblCSQ6Comment2.BorderColor
+            Height: =21
+            HoverBorderColor: =LblCSQ6Comment2.BorderColor
+            HoverColor: =LblCSQ6Comment2.Color
+            HoverFill: =LblCSQ6Comment2.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblCSQ6Comment2.BorderColor
+            PressedColor: =LblCSQ6Comment2.Color
+            PressedFill: =LblCSQ6Comment2.Fill
+            Size: =12
+            Text: ="Were opportunities to negotiate acted upon?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =444
+            X: =112
+            Y: =367
+            ZIndex: =31
+
+        CmbCSQ6 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.CSQ3)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CmbCSQ6.BorderColor
+            Height: =35
+            HoverBorderColor: =ColorFade(CmbCSQ6.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CmbCSQ6.ChevronBackground
+            OnChange: |-
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { CSQ3: CmbCSQ3.Selected.Score}, { CSQ3Points: If(CmbCSQ3.Selected.Score = "Yes",3,If(CmbCSQ3.Selected.Score = "No",0 ,If(CmbCSQ3.Selected.Score = "Partial",1.5,If(CmbCSQ3.Selected.Score = "NA",3))))} )
+                
+                
+                Set(VarCSQ3Points, If(CmbCSQ6.Selected.Score = "Yes",3,If(CmbCSQ6.Selected.Score = "No",0 ,If(CmbCSQ6.Selected.Score = "Partial",1.5,If(CmbCSQ6.Selected.Score = "NA",3,0)))))
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CmbCSQ6.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CmbCSQ6.SearchText,"Score")
+            SelectionTagColor: =CmbCSQ6.HoverColor
+            SelectionTagFill: =CmbCSQ6.HoverFill
+            SelectMultiple: =false
+            Size: =12
+            Width: =145
+            X: =590
+            Y: =360
+            ZIndex: =32
 
     "GalleryCMS As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderStyle: =BorderStyle.None
@@ -3366,13 +3965,13 @@ Screen1 As screen:
             PressedBorderColor: =LblCMQ1Comment2.BorderColor
             PressedColor: =LblCMQ1Comment2.Color
             PressedFill: =LblCMQ1Comment2.Fill
-            Size: =14
-            Text: ="Is there a Case Plan/Strategy clearly noted on the file ?"
+            Size: =12
+            Text: ="Has a Loss Adjuster/Builder been appointed where required?"
             VerticalAlign: =VerticalAlign.Top
             Width: =630
-            X: =96
-            Y: =59
-            ZIndex: =2
+            X: =108
+            Y: =47
+            ZIndex: =1
 
         Separator2_5 As rectangle:
             DisabledFill: =Separator2_5.Fill
@@ -3383,7 +3982,7 @@ Screen1 As screen:
             PressedFill: =Separator2_5.Fill
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
-            ZIndex: =5
+            ZIndex: =2
 
         Title2_46 As label:
             FocusedBorderColor: =Title2_46.BorderColor
@@ -3401,12 +4000,12 @@ Screen1 As screen:
             PressedFill: =Title2_46.Fill
             Size: =12
             Text: |-
-                ="Comment:"
+                ="Comments:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =120
-            Y: =94
-            ZIndex: =6
+            X: =802
+            Y: =53
+            ZIndex: =3
 
         Title2_44 As label:
             FocusedBorderColor: =Title2_44.BorderColor
@@ -3423,11 +4022,11 @@ Screen1 As screen:
             PressedColor: =Title2_44.Color
             PressedFill: =Title2_44.Fill
             Size: =18
-            Text: ="Claim Management Strategy 15%"
+            Text: ="Service Provider Management"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
-            ZIndex: =7
+            ZIndex: =4
 
         LblCMQ2Comment2 As label:
             Fill: =RGBA(255, 255, 0, 1)
@@ -3444,15 +4043,16 @@ Screen1 As screen:
             PressedBorderColor: =LblCMQ2Comment2.BorderColor
             PressedColor: =LblCMQ2Comment2.Color
             PressedFill: =LblCMQ2Comment2.Fill
-            Size: =14
-            Text: ="Is the Claim Management Strategy appropriate?"
+            Size: =12
+            Text: ="Were Loss Adjuster/Builder instructions clear?"
             VerticalAlign: =VerticalAlign.Top
             Width: =976
-            X: =96
-            Y: =164
-            ZIndex: =9
+            X: =108
+            Y: =110
+            ZIndex: =5
 
         Title2_48 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_48.BorderColor
             Height: =25
             HoverBorderColor: =Title2_48.BorderColor
@@ -3470,10 +4070,10 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =120
-            Y: =203
-            ZIndex: =11
+            Width: =81
+            X: =96
+            Y: =477
+            ZIndex: =6
 
         LblCMQ3Comment2 As label:
             Fill: =RGBA(255, 255, 0, 1)
@@ -3490,15 +4090,16 @@ Screen1 As screen:
             PressedBorderColor: =LblCMQ3Comment2.BorderColor
             PressedColor: =LblCMQ3Comment2.Color
             PressedFill: =LblCMQ3Comment2.Fill
-            Size: =14
-            Text: ="Has the Claim Management Strategy been updated and/or case conferences held as needed ? "
+            Size: =12
+            Text: ="Was insured advised of appointment of service provider?"
             VerticalAlign: =VerticalAlign.Top
             Width: =958
-            X: =96
-            Y: =280
-            ZIndex: =13
+            X: =108
+            Y: =178
+            ZIndex: =7
 
         Title2_50 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_50.BorderColor
             Height: =25
             HoverBorderColor: =Title2_50.BorderColor
@@ -3516,10 +4117,10 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =120
-            Y: =324
-            ZIndex: =15
+            Width: =81
+            X: =228
+            Y: =477
+            ZIndex: =8
 
         CmbCMQ1 As combobox:
             BorderColor: =RGBA(54, 176, 75, 1)
@@ -3546,10 +4147,11 @@ Screen1 As screen:
             SelectionTagColor: =CmbCMQ1.HoverColor
             SelectionTagFill: =CmbCMQ1.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =48
-            ZIndex: =17
+            X: =625
+            Y: =36
+            ZIndex: =9
 
         CmbCMQ2 As combobox:
             BorderColor: =RGBA(54, 176, 75, 1)
@@ -3575,10 +4177,11 @@ Screen1 As screen:
             SelectionTagColor: =CmbCMQ2.HoverColor
             SelectionTagFill: =CmbCMQ2.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =159
-            ZIndex: =18
+            X: =625
+            Y: =99
+            ZIndex: =10
 
         CmbCMQ3 As combobox:
             BorderColor: =RGBA(54, 176, 75, 1)
@@ -3604,80 +4207,64 @@ Screen1 As screen:
             SelectionTagColor: =CmbCMQ3.HoverColor
             SelectionTagFill: =CmbCMQ3.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =274
-            ZIndex: =19
+            X: =625
+            Y: =167
+            ZIndex: =11
 
         TxtCMQ1Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CMSQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtCMQ1Comment1.BorderColor
-            Height: =37
+            Height: =258
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCMQ1Comment1.HoverBorderColor
             PressedColor: =TxtCMQ1Comment1.Color
             PressedFill: =TxtCMQ1Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =94
-            ZIndex: =20
+            Size: =12
+            Width: =415
+            X: =815
+            Y: =100
+            ZIndex: =12
 
         TxtCMQ2Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CMSQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCMQ2Comment1.BorderColor
-            Height: =37
+            Height: =29
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCMQ2Comment1.HoverBorderColor
             PressedColor: =TxtCMQ2Comment1.Color
             PressedFill: =TxtCMQ2Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =203
-            ZIndex: =21
+            Size: =12
+            Width: =23
+            X: =178
+            Y: =476
+            ZIndex: =13
 
         TxtCMQ3Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CMSQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCMQ3Comment1.BorderColor
-            Height: =37
+            Height: =23
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCMQ3Comment1.HoverBorderColor
             PressedColor: =TxtCMQ3Comment1.Color
             PressedFill: =TxtCMQ3Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =324
-            ZIndex: =22
-
-        LblCMQ4Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
-            FocusedBorderColor: =LblCMQ4Comment2.BorderColor
-            Height: =24
-            HoverBorderColor: =LblCMQ4Comment2.BorderColor
-            HoverColor: =LblCMQ4Comment2.Color
-            HoverFill: =LblCMQ4Comment2.Fill
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedBorderColor: =LblCMQ4Comment2.BorderColor
-            PressedColor: =LblCMQ4Comment2.Color
-            PressedFill: =LblCMQ4Comment2.Fill
-            Size: =14
-            Text: ="Has recovery been considered and pursued where appropriate ?"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =958
-            X: =96
-            Y: =395
-            ZIndex: =23
+            Size: =12
+            Width: =26
+            X: =309
+            Y: =479
+            ZIndex: =14
 
         Title2_52 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_52.BorderColor
             Height: =25
             HoverBorderColor: =Title2_52.BorderColor
@@ -3695,10 +4282,27 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =120
-            Y: =439
-            ZIndex: =24
+            Width: =95
+            X: =397
+            Y: =480
+            ZIndex: =15
+
+        TxtCMQ4Comment1 As text:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            Default: =ThisItem.CMSQ4Comment1
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
+            FocusedBorderColor: =TxtCMQ4Comment1.BorderColor
+            Height: =35
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =TxtCMQ4Comment1.HoverBorderColor
+            PressedColor: =TxtCMQ4Comment1.Color
+            PressedFill: =TxtCMQ4Comment1.Fill
+            Size: =12
+            Width: =22
+            X: =497
+            Y: =465
+            ZIndex: =16
 
         CmbCMQ4 As combobox:
             BorderColor: =RGBA(54, 176, 75, 1)
@@ -3725,25 +4329,11 @@ Screen1 As screen:
             SelectionTagColor: =CmbCMQ4.HoverColor
             SelectionTagFill: =CmbCMQ4.HoverFill
             SelectMultiple: =false
+            Size: =12
             Width: =145
-            X: =1072
-            Y: =389
-            ZIndex: =25
-
-        TxtCMQ4Comment1 As text:
-            BorderColor: =RGBA(128, 128, 128, 1)
-            Default: =ThisItem.CMSQ4Comment1
-            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
-            FocusedBorderColor: =TxtCMQ4Comment1.BorderColor
-            Height: =37
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =TxtCMQ4Comment1.HoverBorderColor
-            PressedColor: =TxtCMQ4Comment1.Color
-            PressedFill: =TxtCMQ4Comment1.Fill
-            Width: =1002
-            X: =215
-            Y: =439
-            ZIndex: =26
+            X: =625
+            Y: =234
+            ZIndex: =17
 
         UpdateIconCM As icon.Save:
             BorderColor: =RGBA(54, 176, 75, 1)
@@ -3788,7 +4378,7 @@ Screen1 As screen:
             PressedFill: =UpdateIconCM.Fill
             X: =24
             Y: =408
-            ZIndex: =28
+            ZIndex: =18
 
         CalcButton4 As button:
             BorderColor: =ColorFade(CalcButton4.Fill, -15%)
@@ -3828,7 +4418,138 @@ Screen1 As screen:
             Visible: =false
             X: =1111
             Y: =465
-            ZIndex: =29
+            ZIndex: =19
+
+        LblCMQ4Comment2 As label:
+            Fill: =RGBA(255, 255, 0, 1)
+            FocusedBorderColor: =LblCMQ4Comment2.BorderColor
+            Height: =17
+            HoverBorderColor: =LblCMQ4Comment2.BorderColor
+            HoverColor: =LblCMQ4Comment2.Color
+            HoverFill: =LblCMQ4Comment2.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblCMQ4Comment2.BorderColor
+            PressedColor: =LblCMQ4Comment2.Color
+            PressedFill: =LblCMQ4Comment2.Fill
+            Size: =12
+            Text: ="Has procurement policy been followed?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =450
+            X: =108
+            Y: =249
+            ZIndex: =20
+
+        CmbCMQ5 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.CMSQ4)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CmbCMQ5.BorderColor
+            Height: =35
+            HoverBorderColor: =ColorFade(CmbCMQ5.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CmbCMQ5.ChevronBackground
+            OnChange: |-
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { CMSQ4: CmbCMQ4.Selected.Score}, { CMQ4Points: If(CmbCMQ4.Selected.Score = "Yes",3,If(CmbCMQ4.Selected.Score = "No",0 ,If(CmbCMQ4.Selected.Score = "Partial",1.5,If(CmbCMQ4.Selected.Score = "NA",3))))} )
+                
+                
+                Set(VarCMSQ4Points, If(CmbCMQ5.Selected.Score = "Yes",3,If(CmbCMQ5.Selected.Score = "No",0 ,If(CmbCMQ5.Selected.Score = "Partial",1.5,If(CmbCMQ5.Selected.Score = "NA",3,0)))))
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CmbCMQ5.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CmbCMQ5.SearchText,"Score")
+            SelectionTagColor: =CmbCMQ5.HoverColor
+            SelectionTagFill: =CmbCMQ5.HoverFill
+            SelectMultiple: =false
+            Size: =12
+            Width: =145
+            X: =625
+            Y: =305
+            ZIndex: =21
+
+        LblCMQ5Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblCMQ5Comment2.BorderColor
+            Height: =17
+            HoverBorderColor: =LblCMQ5Comment2.BorderColor
+            HoverColor: =LblCMQ5Comment2.Color
+            HoverFill: =LblCMQ5Comment2.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblCMQ5Comment2.BorderColor
+            PressedColor: =LblCMQ5Comment2.Color
+            PressedFill: =LblCMQ5Comment2.Fill
+            Size: =12
+            Text: ="Have adjusters recommendations been adequately considered?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =450
+            X: =108
+            Y: =320
+            ZIndex: =22
+
+        CmbCMQ6 As combobox:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            ChevronBackground: =RGBA(54, 176, 75, 1)
+            DefaultSelectedItems: |
+                =//LookUp(QAChecklistScore,Score = ThisItem.LodgementQ1)
+                Filter(QAChecklistScore, Score=ThisItem.CMSQ4)
+            DisplayFields: =["Score"]
+            DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =CmbCMQ6.BorderColor
+            Height: =35
+            HoverBorderColor: =ColorFade(CmbCMQ6.BorderColor, 15%)
+            Items: =QAChecklistScore.Score
+            MoreItemsButtonColor: =CmbCMQ6.ChevronBackground
+            OnChange: |-
+                =//Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { CMSQ4: CmbCMQ4.Selected.Score}, { CMQ4Points: If(CmbCMQ4.Selected.Score = "Yes",3,If(CmbCMQ4.Selected.Score = "No",0 ,If(CmbCMQ4.Selected.Score = "Partial",1.5,If(CmbCMQ4.Selected.Score = "NA",3))))} )
+                
+                
+                Set(VarCMSQ4Points, If(CmbCMQ6.Selected.Score = "Yes",3,If(CmbCMQ6.Selected.Score = "No",0 ,If(CmbCMQ6.Selected.Score = "Partial",1.5,If(CmbCMQ6.Selected.Score = "NA",3,0)))))
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =CmbCMQ6.HoverBorderColor
+            SearchFields: =["Score"]
+            SearchItems: =Search(QAChecklistScore.Score,CmbCMQ6.SearchText,"Score")
+            SelectionTagColor: =CmbCMQ6.HoverColor
+            SelectionTagFill: =CmbCMQ6.HoverFill
+            SelectMultiple: =false
+            Size: =12
+            Width: =145
+            X: =625
+            Y: =372
+            ZIndex: =23
+
+        LblCMQ6Comment2 As label:
+            Fill: =RGBA(39, 113, 194, 1)
+            FocusedBorderColor: =LblCMQ6Comment2.BorderColor
+            Height: =17
+            HoverBorderColor: =LblCMQ6Comment2.BorderColor
+            HoverColor: =LblCMQ6Comment2.Color
+            HoverFill: =LblCMQ6Comment2.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblCMQ6Comment2.BorderColor
+            PressedColor: =LblCMQ6Comment2.Color
+            PressedFill: =LblCMQ6Comment2.Fill
+            Size: =12
+            Text: ="Have adjusters recommendations been adequately considered?"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =450
+            X: =108
+            Y: =387
+            ZIndex: =24
 
     "GalleryProactivity As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderStyle: =BorderStyle.None
@@ -3865,7 +4586,7 @@ Screen1 As screen:
             PressedColor: =LblProActQ1Comment2.Color
             PressedFill: =LblProActQ1Comment2.Fill
             Size: =14
-            Text: ="Has claim been proactively managed and activities actioned in appropriate timeframes ?"
+            Text: ="Was opportunity to use internal estimator used?"
             VerticalAlign: =VerticalAlign.Top
             Width: =908
             X: =96
@@ -3921,7 +4642,7 @@ Screen1 As screen:
             PressedColor: =Title2_53.Color
             PressedFill: =Title2_53.Fill
             Size: =18
-            Text: ="Proactivity 5%"
+            Text: ="Internal Estimator"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
@@ -3943,7 +4664,7 @@ Screen1 As screen:
             PressedColor: =LblProActQ2Comment2.Color
             PressedFill: =LblProActQ2Comment2.Fill
             Size: =14
-            Text: ="Was investigation completed in a timely and appropriate manner?"
+            Text: ="Was an activity created for Internal Estimator?"
             VerticalAlign: =VerticalAlign.Top
             Width: =976
             X: =96
@@ -3951,6 +4672,7 @@ Screen1 As screen:
             ZIndex: =9
 
         Title2_57 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_57.BorderColor
             Height: =25
             HoverBorderColor: =Title2_57.BorderColor
@@ -3989,7 +4711,7 @@ Screen1 As screen:
             PressedColor: =LblProActQ3Comment2.Color
             PressedFill: =LblProActQ3Comment2.Fill
             Size: =14
-            Text: ="Were opportunities to negotiate acted upon?"
+            Text: ="Were internal estimators recommendations acted upon in a timely manner?"
             VerticalAlign: =VerticalAlign.Top
             Width: =958
             X: =96
@@ -3997,6 +4719,7 @@ Screen1 As screen:
             ZIndex: =13
 
         Title2_59 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_59.BorderColor
             Height: =25
             HoverBorderColor: =Title2_59.BorderColor
@@ -4136,6 +4859,7 @@ Screen1 As screen:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.ProActivityQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtProActQ2Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
@@ -4151,6 +4875,7 @@ Screen1 As screen:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.ProActivityQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtProActQ3Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
@@ -4264,7 +4989,7 @@ Screen1 As screen:
 
         LblPayQ1Comment2 As label:
             FocusedBorderColor: =LblPayQ1Comment2.BorderColor
-            Height: =24
+            Height: =101
             HoverBorderColor: =LblPayQ1Comment2.BorderColor
             HoverColor: =LblPayQ1Comment2.Color
             HoverFill: =LblPayQ1Comment2.Fill
@@ -4277,11 +5002,11 @@ Screen1 As screen:
             PressedColor: =LblPayQ1Comment2.Color
             PressedFill: =LblPayQ1Comment2.Fill
             Size: =14
-            Text: ="Have payment/s been made within appropriate timeframes?"
+            Text: ="Is the initial reserve accurate and in line with known information at the time?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =630
-            X: =94
-            Y: =43
+            Width: =616
+            X: =106
+            Y: =45
             ZIndex: =2
 
         Separator2_7 As rectangle:
@@ -4314,8 +5039,8 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =78
+            X: =988
+            Y: =66
             ZIndex: =6
 
         Title2_60 As label:
@@ -4333,7 +5058,7 @@ Screen1 As screen:
             PressedColor: =Title2_60.Color
             PressedFill: =Title2_60.Fill
             Size: =18
-            Text: ="Payments 5%"
+            Text: ="Reserving"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
@@ -4354,14 +5079,15 @@ Screen1 As screen:
             PressedColor: =LblPayQ2Comment2.Color
             PressedFill: =LblPayQ2Comment2.Fill
             Size: =14
-            Text: ="Has payment been made correctly?"
+            Text: ="Are subsequent reserves accurate?"
             VerticalAlign: =VerticalAlign.Top
             Width: =976
-            X: =94
-            Y: =130
+            X: =106
+            Y: =193
             ZIndex: =9
 
         Title2_64 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_64.BorderColor
             Height: =25
             HoverBorderColor: =Title2_64.BorderColor
@@ -4379,14 +5105,14 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =169
+            Width: =25
+            X: =638
+            Y: =474
             ZIndex: =11
 
         LblPayQ3Comment2 As label:
             FocusedBorderColor: =LblPayQ3Comment2.BorderColor
-            Height: =29
+            Height: =23
             HoverBorderColor: =LblPayQ3Comment2.BorderColor
             HoverColor: =LblPayQ3Comment2.Color
             HoverFill: =LblPayQ3Comment2.Fill
@@ -4399,16 +5125,17 @@ Screen1 As screen:
             PressedColor: =LblPayQ3Comment2.Color
             PressedFill: =LblPayQ3Comment2.Fill
             Size: =14
-            Text: ="Has ITC status and  percentage been completed in ClaimCenter and appropriately considered in settlement?"
+            Text: ="Has the reserve been considered  at every touch point of the claim?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =1000
-            X: =94
-            Y: =222
+            Width: =625
+            X: =106
+            Y: =310
             ZIndex: =13
 
         Title2_66 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_66.BorderColor
-            Height: =25
+            Height: =26
             HoverBorderColor: =Title2_66.BorderColor
             HoverColor: =Title2_66.Color
             HoverFill: =Title2_66.Fill
@@ -4424,9 +5151,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =266
+            Width: =24
+            X: =731
+            Y: =469
             ZIndex: =15
 
         CmbPayQ1 As combobox:
@@ -4455,8 +5182,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbPayQ1.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =32
+            X: =798
+            Y: =45
             ZIndex: =17
 
         CmbPayQ2 As combobox:
@@ -4486,8 +5213,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbPayQ2.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =125
+            X: =798
+            Y: =177
             ZIndex: =18
 
         CmbPayQ3 As combobox:
@@ -4516,8 +5243,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbPayQ3.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =216
+            X: =798
+            Y: =298
             ZIndex: =19
 
         TxtPayQ1Comment1 As text:
@@ -4525,49 +5252,52 @@ Screen1 As screen:
             Default: =ThisItem.PaymentQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtPayQ1Comment1.BorderColor
-            Height: =37
+            Height: =246
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtPayQ1Comment1.HoverBorderColor
             PressedColor: =TxtPayQ1Comment1.Color
             PressedFill: =TxtPayQ1Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =78
+            Width: =246
+            X: =1001
+            Y: =97
             ZIndex: =20
 
         TxtPayQ2Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.PaymentQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtPayQ2Comment1.BorderColor
-            Height: =37
+            Height: =23
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtPayQ2Comment1.HoverBorderColor
             PressedColor: =TxtPayQ2Comment1.Color
             PressedFill: =TxtPayQ2Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =169
+            Width: =24
+            X: =672
+            Y: =472
             ZIndex: =21
 
         TxtPayQ3Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.PaymentQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtPayQ3Comment1.BorderColor
-            Height: =37
+            Height: =24
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtPayQ3Comment1.HoverBorderColor
             PressedColor: =TxtPayQ3Comment1.Color
             PressedFill: =TxtPayQ3Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =266
+            Width: =45
+            X: =767
+            Y: =474
             ZIndex: =22
 
         LblPayQ4Comment2 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblPayQ4Comment2.BorderColor
-            Height: =32
+            Height: =35
             HoverBorderColor: =LblPayQ4Comment2.BorderColor
             HoverColor: =LblPayQ4Comment2.Color
             HoverFill: =LblPayQ4Comment2.Fill
@@ -4582,14 +5312,15 @@ Screen1 As screen:
             Size: =14
             Text: ="Has recovery of outstanding $ been undertaken within timeframe?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =317
+            Width: =36
+            X: =887
+            Y: =469
             ZIndex: =23
 
         Title2_68 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_68.BorderColor
-            Height: =25
+            Height: =35
             HoverBorderColor: =Title2_68.BorderColor
             HoverColor: =Title2_68.Color
             HoverFill: =Title2_68.Fill
@@ -4605,9 +5336,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =359
+            Width: =21
+            X: =935
+            Y: =469
             ZIndex: =24
 
         CmbPayQ4 As combobox:
@@ -4619,7 +5350,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbPayQ4.BorderColor
-            Height: =35
+            Height: =23
             HoverBorderColor: =ColorFade(CmbPayQ4.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbPayQ4.ChevronBackground
@@ -4634,27 +5365,29 @@ Screen1 As screen:
             SelectionTagColor: =CmbPayQ4.HoverColor
             SelectionTagFill: =CmbPayQ4.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =314
+            Width: =41
+            X: =862
+            Y: =469
             ZIndex: =25
 
         TxtPayQ4Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.PaymentQ4Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtPayQ4Comment1.BorderColor
-            Height: =37
+            Height: =22
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtPayQ4Comment1.HoverBorderColor
             PressedColor: =TxtPayQ4Comment1.Color
             PressedFill: =TxtPayQ4Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =359
+            Width: =14
+            X: =954
+            Y: =473
             ZIndex: =26
 
         LblPayQ5Comment2 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblPayQ5Comment2.BorderColor
             Height: =35
             HoverBorderColor: =LblPayQ5Comment2.BorderColor
@@ -4671,14 +5404,15 @@ Screen1 As screen:
             Size: =14
             Text: ="Has Meridian payment been approved within 2 working days of receipt"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =409
+            Width: =59
+            X: =1079
+            Y: =465
             ZIndex: =27
 
         Title2_70 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_70.BorderColor
-            Height: =25
+            Height: =35
             HoverBorderColor: =Title2_70.BorderColor
             HoverColor: =Title2_70.Color
             HoverFill: =Title2_70.Fill
@@ -4694,9 +5428,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =454
+            Width: =45
+            X: =1148
+            Y: =460
             ZIndex: =28
 
         CmbPayQ5 As combobox:
@@ -4708,7 +5442,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbPayQ5.BorderColor
-            Height: =35
+            Height: =36
             HoverBorderColor: =ColorFade(CmbPayQ5.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbPayQ5.ChevronBackground
@@ -4724,24 +5458,25 @@ Screen1 As screen:
             SelectionTagColor: =CmbPayQ5.HoverColor
             SelectionTagFill: =CmbPayQ5.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =409
+            Width: =51
+            X: =1043
+            Y: =455
             ZIndex: =29
 
         TxtPayQ5Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.PaymentQ5Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtPayQ5Comment1.BorderColor
-            Height: =37
+            Height: =26
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtPayQ5Comment1.HoverBorderColor
             PressedColor: =TxtPayQ5Comment1.Color
             PressedFill: =TxtPayQ5Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =454
+            Width: =22
+            X: =1193
+            Y: =465
             ZIndex: =30
 
         UpdateIconFM_3 As icon.Save:
@@ -4849,7 +5584,7 @@ Screen1 As screen:
         LblOtherQ1Comment2 As label:
             Fill: =RGBA(255, 255, 0, 1)
             FocusedBorderColor: =LblOtherQ1Comment2.BorderColor
-            Height: =24
+            Height: =49
             HoverBorderColor: =LblOtherQ1Comment2.BorderColor
             HoverColor: =LblOtherQ1Comment2.Color
             HoverFill: =LblOtherQ1Comment2.Fill
@@ -4862,11 +5597,11 @@ Screen1 As screen:
             PressedColor: =LblOtherQ1Comment2.Color
             PressedFill: =LblOtherQ1Comment2.Fill
             Size: =14
-            Text: ="Has a service provider been appointed where needed or required?"
+            Text: ="Has Recovery opportunity been identified  and referred to Recoveries? Has salvage been identified and noted on claim?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =630
+            Width: =629
             X: =94
-            Y: =43
+            Y: =72
             ZIndex: =2
 
         Separator2_8 As rectangle:
@@ -4899,8 +5634,8 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =78
+            X: =919
+            Y: =50
             ZIndex: =6
 
         Title2_71 As label:
@@ -4918,7 +5653,7 @@ Screen1 As screen:
             PressedColor: =Title2_71.Color
             PressedFill: =Title2_71.Fill
             Size: =18
-            Text: ="Meridian and other Service Providers 10%"
+            Text: ="Subrogation"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
@@ -4927,7 +5662,7 @@ Screen1 As screen:
         LblOtherQ2Comment2 As label:
             Fill: =RGBA(255, 255, 0, 1)
             FocusedBorderColor: =LblOtherQ2Comment2.BorderColor
-            Height: =24
+            Height: =29
             HoverBorderColor: =LblOtherQ2Comment2.BorderColor
             HoverColor: =LblOtherQ2Comment2.Color
             HoverFill: =LblOtherQ2Comment2.Fill
@@ -4940,16 +5675,16 @@ Screen1 As screen:
             PressedColor: =LblOtherQ2Comment2.Color
             PressedFill: =LblOtherQ2Comment2.Fill
             Size: =14
-            Text: ="Were instructions to service provider clear and proactively managed ? "
+            Text: ="Has ClaimCentre been updated with appropriate subrogation status?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
+            Width: =629
             X: =94
-            Y: =130
+            Y: =197
             ZIndex: =9
 
         Title2_75 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_75.BorderColor
-            Height: =25
             HoverBorderColor: =Title2_75.BorderColor
             HoverColor: =Title2_75.Color
             HoverFill: =Title2_75.Fill
@@ -4965,9 +5700,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =169
+            Width: =31
+            X: =742
+            Y: =465
             ZIndex: =11
 
         LblOtherQ3Comment2 As label:
@@ -4985,16 +5720,17 @@ Screen1 As screen:
             PressedColor: =LblOtherQ3Comment2.Color
             PressedFill: =LblOtherQ3Comment2.Fill
             Size: =14
-            Text: ="Was customer advised of appointment of service provider?"
+            Text: ="Has ClaimCentre been updated with Third Party details?"
             VerticalAlign: =VerticalAlign.Top
             Width: =1000
             X: =94
-            Y: =222
+            Y: =312
             ZIndex: =13
 
         Title2_77 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_77.BorderColor
-            Height: =25
+            Height: =19
             HoverBorderColor: =Title2_77.BorderColor
             HoverColor: =Title2_77.Color
             HoverFill: =Title2_77.Fill
@@ -5010,9 +5746,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =266
+            Width: =45
+            X: =861
+            Y: =480
             ZIndex: =15
 
         CmbOtherQ1 As combobox:
@@ -5041,8 +5777,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbOtherQ1.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =32
+            X: =741
+            Y: =79
             ZIndex: =17
 
         CmbOtherQ2 As combobox:
@@ -5071,8 +5807,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbOtherQ2.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =125
+            X: =741
+            Y: =191
             ZIndex: =18
 
         CmbOtherQ3 As combobox:
@@ -5101,8 +5837,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbOtherQ3.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =216
+            X: =741
+            Y: =297
             ZIndex: =19
 
         TxtOtherQ1Comment1 As text:
@@ -5110,50 +5846,52 @@ Screen1 As screen:
             Default: =ThisItem.MOSPQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtOtherQ1Comment1.BorderColor
-            Height: =37
+            Height: =245
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtOtherQ1Comment1.HoverBorderColor
             PressedColor: =TxtOtherQ1Comment1.Color
             PressedFill: =TxtOtherQ1Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =78
+            Width: =279
+            X: =940
+            Y: =75
             ZIndex: =20
 
         TxtOtherQ2Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.MOSPQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtOtherQ2Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtOtherQ2Comment1.HoverBorderColor
             PressedColor: =TxtOtherQ2Comment1.Color
             PressedFill: =TxtOtherQ2Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =169
+            Width: =38
+            X: =773
+            Y: =465
             ZIndex: =21
 
         TxtOtherQ3Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.MOSPQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtOtherQ3Comment1.BorderColor
-            Height: =37
+            Height: =32
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtOtherQ3Comment1.HoverBorderColor
             PressedColor: =TxtOtherQ3Comment1.Color
             PressedFill: =TxtOtherQ3Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =266
+            Width: =22
+            X: =899
+            Y: =472
             ZIndex: =22
 
         LblOtherQ4Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblOtherQ4Comment2.BorderColor
-            Height: =24
+            Height: =27
             HoverBorderColor: =LblOtherQ4Comment2.BorderColor
             HoverColor: =LblOtherQ4Comment2.Color
             HoverFill: =LblOtherQ4Comment2.Fill
@@ -5168,14 +5906,15 @@ Screen1 As screen:
             Size: =14
             Text: ="Have service provider's recommendations been adequately considered?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =317
+            Width: =54
+            X: =999
+            Y: =467
             ZIndex: =23
 
         Title2_79 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_79.BorderColor
-            Height: =25
+            Height: =21
             HoverBorderColor: =Title2_79.BorderColor
             HoverColor: =Title2_79.Color
             HoverFill: =Title2_79.Fill
@@ -5191,9 +5930,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =359
+            Width: =26
+            X: =1044
+            Y: =470
             ZIndex: =24
 
         CmbOtherQ4 As combobox:
@@ -5205,7 +5944,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbOtherQ4.BorderColor
-            Height: =35
+            Height: =32
             HoverBorderColor: =ColorFade(CmbOtherQ4.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbOtherQ4.ChevronBackground
@@ -5222,30 +5961,31 @@ Screen1 As screen:
             SelectionTagColor: =CmbOtherQ4.HoverColor
             SelectionTagFill: =CmbOtherQ4.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =314
+            Width: =60
+            X: =950
+            Y: =467
             ZIndex: =25
 
         TxtOtherQ4Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.MOSPQ4Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtOtherQ4Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtOtherQ4Comment1.HoverBorderColor
             PressedColor: =TxtOtherQ4Comment1.Color
             PressedFill: =TxtOtherQ4Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =359
+            Width: =25
+            X: =1078
+            Y: =460
             ZIndex: =26
 
         LblOtherQ5Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblOtherQ5Comment2.BorderColor
-            Height: =24
+            Height: =37
             HoverBorderColor: =LblOtherQ5Comment2.BorderColor
             HoverColor: =LblOtherQ5Comment2.Color
             HoverFill: =LblOtherQ5Comment2.Fill
@@ -5260,14 +6000,15 @@ Screen1 As screen:
             Size: =14
             Text: ="Are service provider's fees fair and reasonable and questioned if necessary ? "
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =409
+            Width: =27
+            X: =1177
+            Y: =462
             ZIndex: =27
 
         Title2_81 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_81.BorderColor
-            Height: =25
+            Height: =35
             HoverBorderColor: =Title2_81.BorderColor
             HoverColor: =Title2_81.Color
             HoverFill: =Title2_81.Fill
@@ -5283,9 +6024,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =454
+            Width: =22
+            X: =1210
+            Y: =462
             ZIndex: =28
 
         CmbOtherQ5 As combobox:
@@ -5297,7 +6038,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbOtherQ5.BorderColor
-            Height: =35
+            Height: =36
             HoverBorderColor: =ColorFade(CmbOtherQ5.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbOtherQ5.ChevronBackground
@@ -5314,24 +6055,25 @@ Screen1 As screen:
             SelectionTagColor: =CmbOtherQ5.HoverColor
             SelectionTagFill: =CmbOtherQ5.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =409
+            Width: =38
+            X: =1139
+            Y: =461
             ZIndex: =29
 
         TxtOtherQ5Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.MOSPQ5Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtOtherQ5Comment1.BorderColor
-            Height: =37
+            Height: =26
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtOtherQ5Comment1.HoverBorderColor
             PressedColor: =TxtOtherQ5Comment1.Color
             PressedFill: =TxtOtherQ5Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =454
+            Width: =27
+            X: =1238
+            Y: =472
             ZIndex: =30
 
         UpdateIconFM_4 As icon.Save:
@@ -5453,13 +6195,11 @@ Screen1 As screen:
             PressedColor: =LblEstimateQ1Comment2.Color
             PressedFill: =LblEstimateQ1Comment2.Fill
             Size: =13
-            Text: |-
-                ="Is the initial estimate accurate and in line with the initial standard estimate 
-                (or otherwise accurate based on known information at the time )?"
+            Text: ="Have fraud indicators been appropriately identified?"
             VerticalAlign: =VerticalAlign.Top
             Width: =962
-            X: =94
-            Y: =32
+            X: =111
+            Y: =98
             ZIndex: =2
 
         Separator2_9 As rectangle:
@@ -5492,8 +6232,8 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =78
+            X: =822
+            Y: =67
             ZIndex: =6
 
         Title2_82 As label:
@@ -5511,7 +6251,7 @@ Screen1 As screen:
             PressedColor: =Title2_82.Color
             PressedFill: =Title2_82.Fill
             Size: =18
-            Text: ="Estimates 20%"
+            Text: ="Fraud"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
@@ -5532,16 +6272,17 @@ Screen1 As screen:
             PressedColor: =LblEstimateQ2Comment2.Color
             PressedFill: =LblEstimateQ2Comment2.Fill
             Size: =13
-            Text: ="Has the initial estimate been adjusted within the 90 day time frame ?"
+            Text: ="Have appropriate investigations been undertaken?"
             VerticalAlign: =VerticalAlign.Top
             Width: =976
-            X: =94
-            Y: =130
+            X: =111
+            Y: =239
             ZIndex: =9
 
         Title2_86 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_86.BorderColor
-            Height: =25
+            Height: =34
             HoverBorderColor: =Title2_86.BorderColor
             HoverColor: =Title2_86.Color
             HoverFill: =Title2_86.Fill
@@ -5557,15 +6298,15 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =169
+            Width: =45
+            X: =577
+            Y: =462
             ZIndex: =11
 
         LblEstimateQ3Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblEstimateQ3Comment2.BorderColor
-            Height: =24
+            Height: =30
             HoverBorderColor: =LblEstimateQ3Comment2.BorderColor
             HoverColor: =LblEstimateQ3Comment2.Color
             HoverFill: =LblEstimateQ3Comment2.Fill
@@ -5580,14 +6321,14 @@ Screen1 As screen:
             Size: =13
             Text: ="Have the considerations in the Estimating Guidelines been applied ? "
             VerticalAlign: =VerticalAlign.Top
-            Width: =1000
-            X: =94
-            Y: =222
+            Width: =67
+            X: =762
+            Y: =467
             ZIndex: =13
 
         Title2_88 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_88.BorderColor
-            Height: =25
             HoverBorderColor: =Title2_88.BorderColor
             HoverColor: =Title2_88.Color
             HoverFill: =Title2_88.Fill
@@ -5603,9 +6344,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =266
+            Width: =27
+            X: =829
+            Y: =461
             ZIndex: =15
 
         CmbEstimateQ1 As combobox:
@@ -5635,8 +6376,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbEstimateQ1.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =32
+            X: =594
+            Y: =86
             ZIndex: =17
 
         CmbEstimateQ2 As combobox:
@@ -5666,8 +6407,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbEstimateQ2.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =125
+            X: =594
+            Y: =234
             ZIndex: =18
 
         CmbEstimateQ3 As combobox:
@@ -5677,7 +6418,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbEstimateQ3.BorderColor
-            Height: =35
+            Height: =33
             HoverBorderColor: =ColorFade(CmbEstimateQ3.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbEstimateQ3.ChevronBackground
@@ -5694,9 +6435,9 @@ Screen1 As screen:
             SelectionTagColor: =CmbEstimateQ3.HoverColor
             SelectionTagFill: =CmbEstimateQ3.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =216
+            Width: =40
+            X: =699
+            Y: =463
             ZIndex: =19
 
         TxtEstimateQ1Comment1 As text:
@@ -5704,49 +6445,52 @@ Screen1 As screen:
             Default: =ThisItem.EstimatesQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtEstimateQ1Comment1.BorderColor
-            Height: =37
+            Height: =191
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtEstimateQ1Comment1.HoverBorderColor
             PressedColor: =TxtEstimateQ1Comment1.Color
             PressedFill: =TxtEstimateQ1Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =78
+            Width: =349
+            X: =856
+            Y: =98
             ZIndex: =20
 
         TxtEstimateQ2Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.EstimatesQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtEstimateQ2Comment1.BorderColor
-            Height: =37
+            Height: =25
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtEstimateQ2Comment1.HoverBorderColor
             PressedColor: =TxtEstimateQ2Comment1.Color
             PressedFill: =TxtEstimateQ2Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =169
+            Width: =34
+            X: =640
+            Y: =471
             ZIndex: =21
 
         TxtEstimateQ3Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.EstimatesQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtEstimateQ3Comment1.BorderColor
-            Height: =37
+            Height: =22
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtEstimateQ3Comment1.HoverBorderColor
             PressedColor: =TxtEstimateQ3Comment1.Color
             PressedFill: =TxtEstimateQ3Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =266
+            Width: =40
+            X: =856
+            Y: =469
             ZIndex: =22
 
         LblEstimateQ4Comment2 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblEstimateQ4Comment2.BorderColor
-            Height: =32
+            Height: =35
             HoverBorderColor: =LblEstimateQ4Comment2.BorderColor
             HoverColor: =LblEstimateQ4Comment2.Color
             HoverFill: =LblEstimateQ4Comment2.Fill
@@ -5761,14 +6505,15 @@ Screen1 As screen:
             Size: =13
             Text: ="Is the reasoning and calculation of the estimate clear from the claim file ?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =317
+            Width: =43
+            X: =997
+            Y: =465
             ZIndex: =23
 
         Title2_90 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_90.BorderColor
-            Height: =25
+            Height: =35
             HoverBorderColor: =Title2_90.BorderColor
             HoverColor: =Title2_90.Color
             HoverFill: =Title2_90.Fill
@@ -5784,9 +6529,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =359
+            Width: =28
+            X: =1027
+            Y: =461
             ZIndex: =24
 
         CmbEstimateQ4 As combobox:
@@ -5796,7 +6541,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbEstimateQ4.BorderColor
-            Height: =35
+            Height: =29
             HoverBorderColor: =ColorFade(CmbEstimateQ4.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbEstimateQ4.ChevronBackground
@@ -5813,27 +6558,29 @@ Screen1 As screen:
             SelectionTagColor: =CmbEstimateQ4.HoverColor
             SelectionTagFill: =CmbEstimateQ4.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =314
+            Width: =40
+            X: =957
+            Y: =468
             ZIndex: =25
 
         TxtEstimateQ4Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.EstimatesQ4Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtEstimateQ4Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtEstimateQ4Comment1.HoverBorderColor
             PressedColor: =TxtEstimateQ4Comment1.Color
             PressedFill: =TxtEstimateQ4Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =359
+            Width: =34
+            X: =1056
+            Y: =459
             ZIndex: =26
 
         LblEstimateQ5Comment2 As label:
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblEstimateQ5Comment2.BorderColor
             Height: =35
             HoverBorderColor: =LblEstimateQ5Comment2.BorderColor
@@ -5850,14 +6597,15 @@ Screen1 As screen:
             Size: =13
             Text: ="Has reserve/s been reviewed and/or updated if needed based on material developments in a timely manner ?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =409
+            Width: =31
+            X: =1144
+            Y: =467
             ZIndex: =27
 
         Title2_92 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_92.BorderColor
-            Height: =25
+            Height: =35
             HoverBorderColor: =Title2_92.BorderColor
             HoverColor: =Title2_92.Color
             HoverFill: =Title2_92.Fill
@@ -5873,9 +6621,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =454
+            Width: =45
+            X: =1181
+            Y: =460
             ZIndex: =28
 
         CmbEstimateQ5 As combobox:
@@ -5885,7 +6633,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbEstimateQ5.BorderColor
-            Height: =35
+            Height: =36
             HoverBorderColor: =ColorFade(CmbEstimateQ5.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbEstimateQ5.ChevronBackground
@@ -5900,24 +6648,25 @@ Screen1 As screen:
             SelectionTagColor: =CmbEstimateQ5.HoverColor
             SelectionTagFill: =CmbEstimateQ5.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =409
+            Width: =34
+            X: =1111
+            Y: =465
             ZIndex: =29
 
         TxtEstimateQ5Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.EstimatesQ5Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtEstimateQ5Comment1.BorderColor
-            Height: =37
+            Height: =26
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtEstimateQ5Comment1.HoverBorderColor
             PressedColor: =TxtEstimateQ5Comment1.Color
             PressedFill: =TxtEstimateQ5Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =454
+            Width: =23
+            X: =1226
+            Y: =465
             ZIndex: =30
 
         UpdateIconEstimate As icon.Save:
@@ -6026,7 +6775,7 @@ Screen1 As screen:
 
         LblCIRMQ1Comment2 As label:
             FocusedBorderColor: =LblCIRMQ1Comment2.BorderColor
-            Height: =34
+            Height: =41
             HoverBorderColor: =LblCIRMQ1Comment2.BorderColor
             HoverColor: =LblCIRMQ1Comment2.Color
             HoverFill: =LblCIRMQ1Comment2.Fill
@@ -6039,11 +6788,11 @@ Screen1 As screen:
             PressedColor: =LblCIRMQ1Comment2.Color
             PressedFill: =LblCIRMQ1Comment2.Fill
             Size: =13
-            Text: ="If a complaint has been received and not resolved has it been escalated/referred to IDR as necessary ?"
+            Text: ="Was insured provided with a letter outlining our decision and supporting documents to deny the claim within 5 days?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =962
+            Width: =631
             X: =94
-            Y: =32
+            Y: =44
             ZIndex: =2
 
         Separator2_10 As rectangle:
@@ -6076,8 +6825,8 @@ Screen1 As screen:
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =118
-            Y: =62
+            X: =930
+            Y: =107
             ZIndex: =6
 
         Title2_93 As label:
@@ -6095,16 +6844,16 @@ Screen1 As screen:
             PressedColor: =Title2_93.Color
             PressedFill: =Title2_93.Fill
             Size: =18
-            Text: ="Complaints, IDR, Compliance and Risk Management 10%"
+            Text: ="Denial & Complaint Process"
             VerticalAlign: =VerticalAlign.Top
             Width: =832
             X: =24
             ZIndex: =7
 
         LblCIRMQ2Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderColor: =LblCIRMQ2Comment2.BorderColor
-            Height: =24
+            Height: =30
             HoverBorderColor: =LblCIRMQ2Comment2.BorderColor
             HoverColor: =LblCIRMQ2Comment2.Color
             HoverFill: =LblCIRMQ2Comment2.Fill
@@ -6117,16 +6866,17 @@ Screen1 As screen:
             PressedColor: =LblCIRMQ2Comment2.Color
             PressedFill: =LblCIRMQ2Comment2.Fill
             Size: =13
-            Text: ="Reporting of any incident or breach if required in accordance with breach reporting requirements"
+            Text: ="Was insured advised of our denial via telephone?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
+            Width: =473
             X: =94
-            Y: =104
+            Y: =143
             ZIndex: =9
 
         Title2_97 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_97.BorderColor
-            Height: =25
+            Height: =30
             HoverBorderColor: =Title2_97.BorderColor
             HoverColor: =Title2_97.Color
             HoverFill: =Title2_97.Fill
@@ -6142,15 +6892,15 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =133
+            Width: =45
+            X: =88
+            Y: =475
             ZIndex: =11
 
         LblCIRMQ3Comment2 As label:
             Fill: =RGBA(255, 255, 0, 1)
             FocusedBorderColor: =LblCIRMQ3Comment2.BorderColor
-            Height: =24
+            Height: =29
             HoverBorderColor: =LblCIRMQ3Comment2.BorderColor
             HoverColor: =LblCIRMQ3Comment2.Color
             HoverFill: =LblCIRMQ3Comment2.Fill
@@ -6163,16 +6913,17 @@ Screen1 As screen:
             PressedColor: =LblCIRMQ3Comment2.Color
             PressedFill: =LblCIRMQ3Comment2.Fill
             Size: =13
-            Text: ="Compliance with Privacy principles "
+            Text: ="Was denial referral process followed?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =1000
+            Width: =345
             X: =94
-            Y: =180
+            Y: =230
             ZIndex: =13
 
         Title2_99 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_99.BorderColor
-            Height: =25
+            Height: =29
             HoverBorderColor: =Title2_99.BorderColor
             HoverColor: =Title2_99.Color
             HoverFill: =Title2_99.Fill
@@ -6188,9 +6939,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =213
+            Width: =34
+            X: =639
+            Y: =464
             ZIndex: =15
 
         CmbCIRMQ1 As combobox:
@@ -6219,8 +6970,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbCIRMQ1.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =23
+            X: =774
+            Y: =41
             ZIndex: =17
 
         CmbCIRMQ2 As combobox:
@@ -6250,8 +7001,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbCIRMQ2.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =98
+            X: =774
+            Y: =129
             ZIndex: =18
 
         CmbCIRMQ3 As combobox:
@@ -6277,8 +7028,8 @@ Screen1 As screen:
             SelectionTagFill: =CmbCIRMQ3.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =174
+            X: =772
+            Y: =208
             ZIndex: =19
 
         TxtCIRMQ1Comment1 As text:
@@ -6286,50 +7037,52 @@ Screen1 As screen:
             Default: =ThisItem.CICRMQ1Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =TxtCIRMQ1Comment1.BorderColor
-            Height: =37
+            Height: =125
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCIRMQ1Comment1.HoverBorderColor
             PressedColor: =TxtCIRMQ1Comment1.Color
             PressedFill: =TxtCIRMQ1Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =62
+            Width: =285
+            X: =965
+            Y: =143
             ZIndex: =20
 
         TxtCIRMQ2Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CICRMQ2Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCIRMQ2Comment1.BorderColor
-            Height: =37
+            Height: =34
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCIRMQ2Comment1.HoverBorderColor
             PressedColor: =TxtCIRMQ2Comment1.Color
             PressedFill: =TxtCIRMQ2Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =138
+            Width: =45
+            X: =133
+            Y: =471
             ZIndex: =21
 
         TxtCIRMQ3Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CICRMQ3Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCIRMQ3Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCIRMQ3Comment1.HoverBorderColor
             PressedColor: =TxtCIRMQ3Comment1.Color
             PressedFill: =TxtCIRMQ3Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =213
+            Width: =36
+            X: =681
+            Y: =468
             ZIndex: =22
 
         LblCIRMQ4Comment2 As label:
             Fill: =RGBA(255, 255, 0, 1)
             FocusedBorderColor: =LblCIRMQ4Comment2.BorderColor
-            Height: =24
+            Height: =49
             HoverBorderColor: =LblCIRMQ4Comment2.BorderColor
             HoverColor: =LblCIRMQ4Comment2.Color
             HoverFill: =LblCIRMQ4Comment2.Fill
@@ -6342,14 +7095,15 @@ Screen1 As screen:
             PressedColor: =LblCIRMQ4Comment2.Color
             PressedFill: =LblCIRMQ4Comment2.Fill
             Size: =13
-            Text: ="Compliance with General Insurance Code of Practice as required "
+            Text: ="If a complaint has been received and not resolved within 24 hours has a referral been created for the manager?"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
+            Width: =614
             X: =94
-            Y: =256
+            Y: =304
             ZIndex: =23
 
         Title2_101 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_101.BorderColor
             Height: =25
             HoverBorderColor: =Title2_101.BorderColor
@@ -6367,9 +7121,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =294
+            Width: =48
+            X: =764
+            Y: =463
             ZIndex: =24
 
         CmbCIRMQ4 As combobox:
@@ -6396,29 +7150,30 @@ Screen1 As screen:
             SelectionTagFill: =CmbCIRMQ4.HoverFill
             SelectMultiple: =false
             Width: =145
-            X: =1070
-            Y: =254
+            X: =770
+            Y: =298
             ZIndex: =25
 
         TxtCIRMQ4Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CICRMQ4Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCIRMQ4Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCIRMQ4Comment1.HoverBorderColor
             PressedColor: =TxtCIRMQ4Comment1.Color
             PressedFill: =TxtCIRMQ4Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =294
+            Width: =48
+            X: =813
+            Y: =460
             ZIndex: =26
 
         LblCIRMQ5Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblCIRMQ5Comment2.BorderColor
-            Height: =24
+            Height: =27
             HoverBorderColor: =LblCIRMQ5Comment2.BorderColor
             HoverColor: =LblCIRMQ5Comment2.Color
             HoverFill: =LblCIRMQ5Comment2.Fill
@@ -6433,14 +7188,15 @@ Screen1 As screen:
             Size: =13
             Text: ="Referral of identified issues or risk factors to Underwriting if appropriate "
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =334
+            Width: =25
+            X: =950
+            Y: =466
             ZIndex: =27
 
         Title2_103 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_103.BorderColor
-            Height: =25
+            Height: =29
             HoverBorderColor: =Title2_103.BorderColor
             HoverColor: =Title2_103.Color
             HoverFill: =Title2_103.Fill
@@ -6456,9 +7212,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =373
+            Width: =33
+            X: =976
+            Y: =462
             ZIndex: =28
 
         CmbCIRMQ5 As combobox:
@@ -6468,7 +7224,7 @@ Screen1 As screen:
             DisplayFields: =["Score"]
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
             FocusedBorderColor: =CmbCIRMQ5.BorderColor
-            Height: =35
+            Height: =31
             HoverBorderColor: =ColorFade(CmbCIRMQ5.BorderColor, 15%)
             Items: =QAChecklistScore.Score
             MoreItemsButtonColor: =CmbCIRMQ5.ChevronBackground
@@ -6484,30 +7240,31 @@ Screen1 As screen:
             SelectionTagColor: =CmbCIRMQ5.HoverColor
             SelectionTagFill: =CmbCIRMQ5.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =334
+            Width: =56
+            X: =883
+            Y: =460
             ZIndex: =29
 
         TxtCIRMQ5Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CICRMQ5Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCIRMQ5Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCIRMQ5Comment1.HoverBorderColor
             PressedColor: =TxtCIRMQ5Comment1.Color
             PressedFill: =TxtCIRMQ5Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =373
+            Width: =35
+            X: =1010
+            Y: =460
             ZIndex: =30
 
         LblCIRMQ6Comment2 As label:
-            Fill: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =LblCIRMQ6Comment2.BorderColor
-            Height: =24
+            Height: =36
             HoverBorderColor: =LblCIRMQ6Comment2.BorderColor
             HoverColor: =LblCIRMQ6Comment2.Color
             HoverFill: =LblCIRMQ6Comment2.Fill
@@ -6522,14 +7279,15 @@ Screen1 As screen:
             Size: =13
             Text: ="If referred to IDR has the process been followed correctly"
             VerticalAlign: =VerticalAlign.Top
-            Width: =976
-            X: =94
-            Y: =410
+            Width: =39
+            X: =1140
+            Y: =465
             ZIndex: =31
 
         Title2_105 As label:
+            Color: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =Title2_105.BorderColor
-            Height: =25
+            Height: =29
             HoverBorderColor: =Title2_105.BorderColor
             HoverColor: =Title2_105.Color
             HoverFill: =Title2_105.Fill
@@ -6545,9 +7303,9 @@ Screen1 As screen:
             Text: |-
                 ="Comment:"
             VerticalAlign: =VerticalAlign.Top
-            Width: =140
-            X: =118
-            Y: =449
+            Width: =45
+            X: =1179
+            Y: =465
             ZIndex: =32
 
         CmbCIRMQ6 As combobox:
@@ -6573,24 +7331,25 @@ Screen1 As screen:
             SelectionTagColor: =CmbCIRMQ6.HoverColor
             SelectionTagFill: =CmbCIRMQ6.HoverFill
             SelectMultiple: =false
-            Width: =145
-            X: =1070
-            Y: =410
+            Width: =53
+            X: =1081
+            Y: =462
             ZIndex: =33
 
         TxtCIRMQ6Comment1 As text:
             BorderColor: =RGBA(128, 128, 128, 1)
             Default: =ThisItem.CICRMQ6Comment1
             DisplayMode: =If(ThisItem.Status= "Closed"Or ThisItem.Status= "InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =TxtCIRMQ6Comment1.BorderColor
             Height: =37
             OnSelect: =Select(Parent)
             PressedBorderColor: =TxtCIRMQ6Comment1.HoverBorderColor
             PressedColor: =TxtCIRMQ6Comment1.Color
             PressedFill: =TxtCIRMQ6Comment1.Fill
-            Width: =1002
-            X: =213
-            Y: =449
+            Width: =29
+            X: =1224
+            Y: =467
             ZIndex: =34
 
         UpdateIconEstimate_1 As icon.Save:
