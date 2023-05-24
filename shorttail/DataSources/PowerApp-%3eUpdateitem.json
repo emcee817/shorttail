@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "501baf10-d709-46bc-bc60-25267bb343f7",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "PowerApp->Updateitem",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

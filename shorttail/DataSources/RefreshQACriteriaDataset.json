@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "f2296260-2839-4c95-8eec-e559199c19e5",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "RefreshQACriteriaDataset",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

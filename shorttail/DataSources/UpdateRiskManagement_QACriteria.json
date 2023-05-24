@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "9117adce-3806-49e1-874d-a26b884ba97e",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "UpdateRiskManagement_QACriteria",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

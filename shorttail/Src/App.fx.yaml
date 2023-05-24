@@ -1,0 +1,16 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(CurrentUser,User().FullName);
+        ClearCollect(CollReviewer,Reviewer);
+        ClearCollect(CollQACheckList,QACheckList);
+        Set(ReviewerUserID,Filter(Reviewer,ReviewerName=CurrentUser).Title);
+        Set(Prevmm,Switch( Month(Now()-1), 1, "January", 2, "February", 3, "March",4, "April", 5, "May", 6, "June",7, "July", 8, "August", 9, "September",10, "October", 11, "November", 12, "December" ));
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

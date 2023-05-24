@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "ad46f244-577f-4c39-a674-7dc3efec0e4a",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "QACRiteria_UpdateIndemnity",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

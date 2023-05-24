@@ -1,0 +1,749 @@
+Screen2 As screen:
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: |-
+        =ClearCollect(CollReviewer,Reviewer);
+        ClearCollect(CollQACheckList,QACheckList);
+    Orientation: =If(Screen2.Width < Screen2.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Screen2.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Label1 As label:
+        Align: =LayoutAlignItems.Center
+        FocusedBorderColor: =Label1.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =51
+        HoverBorderColor: =Label1.BorderColor
+        HoverColor: =Label1.Color
+        HoverFill: =Label1.Fill
+        PressedBorderColor: =Label1.BorderColor
+        PressedColor: =Label1.Color
+        PressedFill: =Label1.Fill
+        Size: =28
+        Text: ="Create New"
+        Width: =605
+        X: =44
+        Y: =12
+        ZIndex: =1
+
+    Rectangle1 As rectangle:
+        DisabledFill: =Rectangle1.Fill
+        FocusedBorderColor: =Rectangle1.BorderColor
+        Height: =766
+        HoverFill: =Rectangle1.Fill
+        PressedFill: =Rectangle1.Fill
+        Width: =8
+        X: =681
+        ZIndex: =2
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        DisabledBorderColor: =Gallery2.BorderColor
+        DisabledFill: =Gallery2.Fill
+        Fill: |-
+            =RGBA(0, 0, 0, 0)
+            //If(ThisItem.Status=Closed, Color.Aqua, Color.AliceBlue)
+        Height: =563
+        HoverBorderColor: =Gallery2.BorderColor
+        HoverFill: =Gallery2.Fill
+        Items: |-
+            =//QACheckList
+            If(Len(TxtSearch.Text)<1,Sort(CollQACheckList,"Claimnumber",SortOrder.Ascending),Search(CollQACheckList, Text(TxtSearch.Text),"ClaimNumber"))
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =Gallery2.BorderColor
+        PressedBorderColor: =Gallery2.BorderColor
+        PressedFill: =Gallery2.Fill
+        TemplatePadding: =0
+        TemplateSize: =80
+        X: =714
+        Y: =159
+        ZIndex: =3
+
+        Image3 As image:
+            FocusedBorderColor: =Image3.BorderColor
+            Height: =28
+            HoverBorderColor: =ColorFade(Image3.BorderColor, 20%)
+            HoverFill: =ColorFade(Image3.Fill, 20%)
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =ColorFade(Image3.BorderColor, -20%)
+            PressedFill: =ColorFade(Image3.Fill, -20%)
+            Visible: =false
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Image3.Height / 2)
+            ZIndex: =1
+
+        TxtClaimnumberSearch As label:
+            FocusedBorderColor: =TxtClaimnumberSearch.BorderColor
+            Height: =30
+            HoverBorderColor: =TxtClaimnumberSearch.BorderColor
+            HoverColor: =TxtClaimnumberSearch.Color
+            HoverFill: =TxtClaimnumberSearch.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =TxtClaimnumberSearch.BorderColor
+            PressedColor: =TxtClaimnumberSearch.Color
+            PressedFill: =TxtClaimnumberSearch.Fill
+            Size: =14
+            Text: =ThisItem.ClaimNumber
+            VerticalAlign: =VerticalAlign.Top
+            Width: =351
+            X: =243
+            Y: =10
+            ZIndex: =2
+
+        Subtitle2 As label:
+            FocusedBorderColor: =Subtitle2.BorderColor
+            Height: =22
+            HoverBorderColor: =Subtitle2.BorderColor
+            HoverColor: =Subtitle2.Color
+            HoverFill: =Subtitle2.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =Subtitle2.BorderColor
+            PressedColor: =Subtitle2.Color
+            PressedFill: =Subtitle2.Fill
+            Size: =12
+            Text: =ThisItem.TeamMember
+            VerticalAlign: =VerticalAlign.Top
+            Width: =351
+            X: =TxtClaimnumberSearch.X
+            Y: =34
+            ZIndex: =3
+
+        Separator3 As rectangle:
+            DisabledFill: =Separator3.Fill
+            FocusedBorderColor: =Separator3.BorderColor
+            Height: =1
+            HoverFill: =Separator3.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =Separator3.Fill
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label4 As label:
+            FocusedBorderColor: =Label4.BorderColor
+            Height: =31
+            HoverBorderColor: =Label4.BorderColor
+            HoverColor: =Label4.Color
+            HoverFill: =Label4.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Label4.BorderColor
+            PressedColor: =Label4.Color
+            PressedFill: =Label4.Fill
+            Text: ="Claim Number"
+            X: =40
+            ZIndex: =6
+
+        Label4_1 As label:
+            FocusedBorderColor: =Label4_1.BorderColor
+            Height: =28
+            HoverBorderColor: =Label4_1.BorderColor
+            HoverColor: =Label4_1.Color
+            HoverFill: =Label4_1.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Label4_1.BorderColor
+            PressedColor: =Label4_1.Color
+            PressedFill: =Label4_1.Fill
+            Text: ="Team Member"
+            X: =40
+            Y: =26
+            ZIndex: =7
+
+        Icon3 As icon.Draw:
+            DisabledFill: =Icon3.Fill
+            DisplayMode: =If(ThisItem.Status="Closed" Or ThisItem.Status="InActive" ,DisplayMode.Disabled,DisplayMode.Edit)
+            FocusedBorderColor: =Icon3.BorderColor
+            Height: =44
+            HoverBorderColor: =ColorFade(Icon3.BorderColor, 20%)
+            HoverColor: =ColorFade(Icon3.Color, 20%)
+            HoverFill: =Icon3.Fill
+            Icon: =Icon.Draw
+            OnSelect: |-
+                =
+                
+                ClearCollect(CollQACheckList,QACheckList);
+                Set(SelectedClaimNumber,ThisItem.ClaimNumber);
+                
+                /*Set(ClaimnumberTotalpoints1,ThisItem.LodgementQ1Points + ThisItem.LodgementQ2Point + 
+                ThisItem.IndemnityQ1Points + ThisItem.IndemnityQ2Points + ThisItem.IndemnityQ3Points +
+                ThisItem.FMQ1Points + ThisItem.FMQ2Points + ThisItem.FMQ3Points + ThisItem.FMQ4Points + ThisItem.FMQ5Points +
+                ThisItem.CSQ1points + ThisItem.CSQ2Points + ThisItem.CSQ3Points +
+                ThisItem.CMQ1Points + ThisItem.CMQ2Points + ThisItem.CMQ3Points + ThisItem.CMQ4Points  +
+                ThisItem.ProActiveQ1Points + ThisItem.ProActiveQ2Points + ThisItem.ProActiveQ3Points +
+                ThisItem.PaymentQ1Points + ThisItem.PaymentQ2Points + ThisItem.PaymentQ3Points + ThisItem.PaymentQ4Points + ThisItem.PaymentQ5Points +
+                ThisItem.OtherQ1Points + ThisItem.OtherQ2Points + ThisItem.OtherQ3Points + ThisItem.OtherQ4Points + ThisItem.OtherQ5Points +
+                ThisItem.EstimateQ1Points + ThisItem.EstimateQ2Points + ThisItem.EstimateQ3Points + ThisItem.EstimateQ4Points + ThisItem.EstimateQ5Points +
+                ThisItem.RMQ1Points + ThisItem.RMQ2Points + ThisItem.RMQ3Points + ThisItem.RMQ4Points + ThisItem.RMQ5Points + ThisItem.RMQ6Points
+                  );
+                  */
+                  Set(ClaimnumberTotalpoints1,ThisItem.QATotalPoints);
+                Navigate(Screen1,ScreenTransition.None)
+            PressedBorderColor: =ColorFade(Icon3.BorderColor, -20%)
+            PressedColor: =ColorFade(Icon3.Color, -20%)
+            PressedFill: =Icon3.Fill
+            Width: =72
+            X: =522
+            Y: =18
+            ZIndex: =8
+
+        Subtitle2_1 As label:
+            FocusedBorderColor: =Subtitle2_1.BorderColor
+            Height: =30
+            HoverBorderColor: =Subtitle2_1.BorderColor
+            HoverColor: =Subtitle2_1.Color
+            HoverFill: =Subtitle2_1.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =Subtitle2_1.BorderColor
+            PressedColor: =Subtitle2_1.Color
+            PressedFill: =Subtitle2_1.Fill
+            Size: =12
+            Text: =ThisItem.MonthInReview
+            VerticalAlign: =VerticalAlign.Top
+            Width: =298
+            X: =243
+            Y: =53
+            ZIndex: =9
+
+        Label4_2 As label:
+            FocusedBorderColor: =Label4_2.BorderColor
+            Height: =21
+            HoverBorderColor: =Label4_2.BorderColor
+            HoverColor: =Label4_2.Color
+            HoverFill: =Label4_2.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Label4_2.BorderColor
+            PressedColor: =Label4_2.Color
+            PressedFill: =Label4_2.Fill
+            Text: ="Month In Review"
+            X: =40
+            Y: =50
+            ZIndex: =10
+
+        Icon1 As icon.Message:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =Icon1.Fill
+            DisplayMode: |-
+                =//If(ThisItem.Status="Closed",DisplayMode.Disabled,DisplayMode.Edit)
+                DisplayMode.Edit
+            Fill: |-
+                =RGBA(0, 0, 0, 0)
+                //If(ThisItem.Status="Closed", Color.Aqua, Color.AliceBlue)
+            FocusedBorderColor: =Icon1.BorderColor
+            Height: =90
+            HoverBorderColor: =ColorFade(Icon1.BorderColor, 20%)
+            HoverColor: =ColorFade(Icon1.Color, 20%)
+            HoverFill: =Icon1.Fill
+            Icon: =Icon.Message
+            OnSelect: |-
+                =Set(SelectedClaimNumber,ThisItem.ClaimNumber);
+                /*Set(ClaimnumberTotalpoints1,ThisItem.LodgementQ1Points + ThisItem.LodgementQ2Point + 
+                ThisItem.IndemnityQ1Points + ThisItem.IndemnityQ2Points + ThisItem.IndemnityQ3Points +
+                ThisItem.FMQ1Points + ThisItem.FMQ2Points + ThisItem.FMQ3Points + ThisItem.FMQ4Points + ThisItem.FMQ5Points +
+                ThisItem.CSQ1points + ThisItem.CSQ2Points + ThisItem.CSQ3Points +
+                ThisItem.CMQ1Points + ThisItem.CMQ2Points + ThisItem.CMQ3Points + ThisItem.CMQ4Points  +
+                ThisItem.ProActiveQ1Points + ThisItem.ProActiveQ2Points + ThisItem.ProActiveQ3Points +
+                ThisItem.PaymentQ1Points + ThisItem.PaymentQ2Points + ThisItem.PaymentQ3Points + ThisItem.PaymentQ4Points + ThisItem.PaymentQ5Points +
+                ThisItem.OtherQ1Points + ThisItem.OtherQ2Points + ThisItem.OtherQ3Points + ThisItem.OtherQ4Points + ThisItem.OtherQ5Points +
+                ThisItem.EstimateQ1Points + ThisItem.EstimateQ2Points + ThisItem.EstimateQ3Points + ThisItem.EstimateQ4Points + ThisItem.EstimateQ5Points +
+                ThisItem.RMQ1Points + ThisItem.RMQ2Points + ThisItem.RMQ3Points + ThisItem.RMQ4Points + ThisItem.RMQ5Points + ThisItem.RMQ6Points
+                );
+                */  
+                Set(ClaimnumberTotalpoints1,ThisItem.QATotalPoints);
+                Navigate(Screen1,ScreenTransition.None)
+            PressedBorderColor: =ColorFade(Icon1.BorderColor, -20%)
+            PressedColor: =ColorFade(Icon1.Color, -20%)
+            PressedFill: =Icon1.Fill
+            TabIndex: =0
+            Width: =555
+            ZIndex: =11
+
+        TxtClaimnumberSearch_4 As label:
+            Fill: |-
+                =//RGBA(0, 0, 0, 0)
+                If(ThisItem.Status="Closed", Color.Aqua, Color.SkyBlue)
+            FocusedBorderColor: =TxtClaimnumberSearch_4.BorderColor
+            Height: =28
+            HoverBorderColor: =TxtClaimnumberSearch_4.BorderColor
+            HoverColor: =TxtClaimnumberSearch_4.Color
+            HoverFill: =TxtClaimnumberSearch_4.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =TxtClaimnumberSearch_4.BorderColor
+            PressedColor: =TxtClaimnumberSearch_4.Color
+            PressedFill: =TxtClaimnumberSearch_4.Fill
+            Size: =12
+            Text: =ThisItem.Status
+            VerticalAlign: =VerticalAlign.Top
+            Width: =98
+            X: =426
+            Y: =34
+            ZIndex: =12
+
+        Label4_8 As label:
+            FocusedBorderColor: =Label4_8.BorderColor
+            Height: =35
+            HoverBorderColor: =Label4_8.BorderColor
+            HoverColor: =Label4_8.Color
+            HoverFill: =Label4_8.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Label4_8.BorderColor
+            PressedColor: =Label4_8.Color
+            PressedFill: =Label4_8.Fill
+            Text: ="Status"
+            Width: =73
+            X: =421
+            Y: =5
+            ZIndex: =13
+
+        Icon12 As icon.Trash:
+            DisabledFill: =Icon12.Fill
+            FocusedBorderColor: =Icon12.BorderColor
+            Height: =44
+            HoverBorderColor: =ColorFade(Icon12.BorderColor, 20%)
+            HoverColor: =ColorFade(Icon12.Color, 20%)
+            HoverFill: =Icon12.Fill
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Patch( QACheckList,First( Filter( QACheckList, ID = Value(ThisItem.ID)) ), { Status: "InActive" } );
+                ClearCollect(CollQACheckList,QACheckList);
+            PressedBorderColor: =ColorFade(Icon12.BorderColor, -20%)
+            PressedColor: =ColorFade(Icon12.Color, -20%)
+            PressedFill: =Icon12.Fill
+            Width: =44
+            X: =580
+            Y: =18
+            ZIndex: =14
+
+    Button3 As button:
+        BorderColor: =ColorFade(Button3.Fill, -15%)
+        DisplayMode: =If(Len(CmbTeamMember.Selected.Staff)<1 Or Len(CmbTeam.Selected.Result)<1 Or Len(TxtClaimNumber.Text)<1,DisplayMode.Disabled,DisplayMode.Edit)
+        FocusedBorderColor: =Button3.BorderColor
+        Height: =62
+        HoverBorderColor: =ColorFade(Button3.BorderColor, 20%)
+        OnSelect: |-
+            =QACriteriaCreate.Run(GUID(),CmbTeamMember.Selected.Staff,CmbTeam.Selected.Result,TxtClaimNumber.Text,TxtReviewer.Text,Label15.Text,DDMonthReview.Selected.Value & "-" & DDYearReview.Selected.Value);
+            //QACriteriaCreate.Run(GUID(),CmbTeamMember.Selected.Staff,CmbTeam.Selected.Result,TxtClaimNumber.Text,TxtReviewer.Text,Label19.Text,DDMonthReview.Selected.Value & "-" & DDYearReview.Selected.Value);
+            Set(ClaimnumberTotalpoints,0 );
+            Set(SelectedClaimNumber,TxtClaimNumber.Text);
+            Refresh(QACheckList);
+            ClearCollect(CollQACheckList,QACheckList);
+            UpdateContext({resettext: !resettext});
+            UpdateContext({resettext: !resettext});
+            
+            
+            Navigate(Screen1,ScreenTransition.None)
+            
+            
+            //Text(DateTimeValue(Start.Text),
+        PressedBorderColor: =Button3.Fill
+        PressedColor: =Button3.Fill
+        PressedFill: =Button3.Color
+        Text: ="Create Item"
+        Width: =539
+        X: =60
+        Y: =562
+        ZIndex: =4
+
+    CmbTeamMember As combobox:
+        DisplayFields: =["FirstName"]
+        FocusedBorderColor: =CmbTeamMember.BorderColor
+        HoverBorderColor: =ColorFade(CmbTeamMember.BorderColor, 15%)
+        IsSearchable: =false
+        Items: =TeamMember
+        MoreItemsButtonColor: =CmbTeamMember.ChevronBackground
+        PressedBorderColor: =CmbTeamMember.HoverBorderColor
+        Reset: =resettext
+        SearchFields: =["FirstName"]
+        SearchItems: =[]
+        SelectionTagColor: =CmbTeamMember.HoverColor
+        SelectionTagFill: =CmbTeamMember.HoverFill
+        SelectMultiple: =false
+        X: =270
+        Y: =177
+        ZIndex: =5
+
+    CmbTeam As combobox:
+        DefaultSelectedItems: =Filter(TeamMember,Team = CmbTeamMember.Selected.Team).Team
+        DisplayFields: =["Result"]
+        FocusedBorderColor: =CmbTeam.BorderColor
+        HoverBorderColor: =ColorFade(CmbTeam.BorderColor, 15%)
+        IsSearchable: =false
+        Items: |-
+            =ForAll(Distinct(Sort(TeamMember,Team,SortOrder.Ascending),Team), {Result: ThisRecord.Value})
+        MoreItemsButtonColor: =CmbTeam.ChevronBackground
+        PressedBorderColor: =CmbTeam.HoverBorderColor
+        Reset: |-
+            =
+            resettext
+        SearchFields: =["Result"]
+        SearchItems: =[]
+        SelectionTagColor: =CmbTeam.HoverColor
+        SelectionTagFill: =CmbTeam.HoverFill
+        SelectMultiple: =false
+        X: =270
+        Y: =227
+        ZIndex: =6
+
+    TxtClaimNumber As text:
+        Default: =""
+        FocusedBorderColor: =TxtClaimNumber.BorderColor
+        Height: =43
+        HintText: ="Claim Number"
+        PressedBorderColor: =TxtClaimNumber.HoverBorderColor
+        PressedColor: =TxtClaimNumber.Color
+        PressedFill: =TxtClaimNumber.Fill
+        Reset: =resettext
+        Width: =330
+        X: =270
+        Y: =277
+        ZIndex: =7
+
+    TxtReviewer As text:
+        Default: =User().FullName
+        FocusedBorderColor: =TxtReviewer.BorderColor
+        Height: =43
+        HintText: ="Claim Number"
+        PressedBorderColor: =TxtReviewer.HoverBorderColor
+        PressedColor: =TxtReviewer.Color
+        PressedFill: =TxtReviewer.Fill
+        Width: =330
+        X: =270
+        Y: =332
+        ZIndex: =8
+
+    DatePicker1 As datepicker:
+        FocusedBorderColor: =DatePicker1.BorderColor
+        Format: |-
+            =Text(DatePicker1.SelectedDate, "[$-en-US]dd/mm/yyyy")
+            //Text(DatePicker1.SelectedDate, "[$-en-US]mm/dd/yyyy")
+        HoverBorderColor: =DatePicker1.BorderColor
+        HoverFill: =DatePicker1.Fill
+        InputTextPlaceholder: =Text(Date(2001,12,31), DatePicker1.Format, DatePicker1.Language)
+        PressedBorderColor: =DatePicker1.BorderColor
+        PressedFill: =DatePicker1.Fill
+        X: =270
+        Y: =387
+        ZIndex: =9
+
+    DDYearReview As dropdown:
+        Default: =Year(Now())
+        FocusedBorderColor: =DDYearReview.BorderColor
+        Height: =41
+        HoverBorderColor: =ColorFade(DDYearReview.BorderColor, 15%)
+        Items: =[Year(Now())-2,Year(Now())-1,Year(Now()),Year(Now()) +1,Year(Now()) +2,Year(Now()) +3]
+        PressedBorderColor: =DDYearReview.HoverBorderColor
+        Width: =109
+        X: =489
+        Y: =440
+        ZIndex: =11
+
+    DDMonthReview As dropdown:
+        Default: =Prevmm
+        FocusedBorderColor: =DDMonthReview.BorderColor
+        Height: =41
+        HoverBorderColor: =ColorFade(DDMonthReview.BorderColor, 15%)
+        Items: =["January","February","March","April","May","June","July","August","September","October","November","December"]
+        PressedBorderColor: =DDMonthReview.HoverBorderColor
+        Width: =203
+        X: =270
+        Y: =440
+        ZIndex: =13
+
+    Label3 As label:
+        FocusedBorderColor: =Label3.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label3.BorderColor
+        HoverColor: =Label3.Color
+        HoverFill: =Label3.Fill
+        PressedBorderColor: =Label3.BorderColor
+        PressedColor: =Label3.Color
+        PressedFill: =Label3.Fill
+        Text: ="Team Member"
+        X: =81
+        Y: =177
+        ZIndex: =14
+
+    Label3_1 As label:
+        FocusedBorderColor: =Label3_1.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label3_1.BorderColor
+        HoverColor: =Label3_1.Color
+        HoverFill: =Label3_1.Fill
+        PressedBorderColor: =Label3_1.BorderColor
+        PressedColor: =Label3_1.Color
+        PressedFill: =Label3_1.Fill
+        Text: ="Team"
+        X: =81
+        Y: =227
+        ZIndex: =15
+
+    Label3_2 As label:
+        FocusedBorderColor: =Label3_2.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label3_2.BorderColor
+        HoverColor: =Label3_2.Color
+        HoverFill: =Label3_2.Fill
+        PressedBorderColor: =Label3_2.BorderColor
+        PressedColor: =Label3_2.Color
+        PressedFill: =Label3_2.Fill
+        Text: ="Claim number"
+        X: =81
+        Y: =285
+        ZIndex: =16
+
+    Label3_3 As label:
+        FocusedBorderColor: =Label3_3.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label3_3.BorderColor
+        HoverColor: =Label3_3.Color
+        HoverFill: =Label3_3.Fill
+        PressedBorderColor: =Label3_3.BorderColor
+        PressedColor: =Label3_3.Color
+        PressedFill: =Label3_3.Fill
+        Text: ="Reviewer"
+        X: =81
+        Y: =335
+        ZIndex: =17
+
+    Label3_4 As label:
+        FocusedBorderColor: =Label3_4.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label3_4.BorderColor
+        HoverColor: =Label3_4.Color
+        HoverFill: =Label3_4.Fill
+        PressedBorderColor: =Label3_4.BorderColor
+        PressedColor: =Label3_4.Color
+        PressedFill: =Label3_4.Fill
+        Text: ="Review Date"
+        X: =81
+        Y: =391
+        ZIndex: =18
+
+    Label3_5 As label:
+        FocusedBorderColor: =Label3_5.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label3_5.BorderColor
+        HoverColor: =Label3_5.Color
+        HoverFill: =Label3_5.Fill
+        PressedBorderColor: =Label3_5.BorderColor
+        PressedColor: =Label3_5.Color
+        PressedFill: =Label3_5.Fill
+        Text: ="Month In Review"
+        Width: =176
+        X: =81
+        Y: =441
+        ZIndex: =19
+
+    Icon2 As icon.Reload:
+        DisabledFill: =Icon2.Fill
+        FocusedBorderColor: =Icon2.BorderColor
+        Height: =41
+        HoverBorderColor: =ColorFade(Icon2.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon2.Color, 20%)
+        HoverFill: =Icon2.Fill
+        Icon: =Icon.Reload
+        OnSelect: |-
+            =Refresh(QACheckList);
+            ClearCollect(CollReviewer,Reviewer);
+            ClearCollect(CollQACheckList,QACheckList);
+        PressedBorderColor: =ColorFade(Icon2.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon2.Color, -20%)
+        PressedFill: =Icon2.Fill
+        Width: =47
+        X: =1304
+        Y: =12
+        ZIndex: =21
+
+    TxtSearch As text:
+        Default: =""
+        FocusedBorderColor: =TxtSearch.BorderColor
+        Height: =51
+        HintText: ="Search Claim number Here"
+        PressedBorderColor: =TxtSearch.HoverBorderColor
+        PressedColor: =TxtSearch.Color
+        PressedFill: =TxtSearch.Fill
+        Width: =427
+        X: =717
+        Y: =81
+        ZIndex: =22
+
+    Icon5 As icon.Search:
+        DisabledFill: =Icon5.Fill
+        FocusedBorderColor: =Icon5.BorderColor
+        Height: =36
+        HoverBorderColor: =ColorFade(Icon5.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon5.Color, 20%)
+        HoverFill: =Icon5.Fill
+        Icon: =Icon.Search
+        PressedBorderColor: =ColorFade(Icon5.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon5.Color, -20%)
+        PressedFill: =Icon5.Fill
+        X: =1080
+        Y: =88
+        ZIndex: =23
+
+    Label5 As label:
+        FocusedBorderColor: =Label5.BorderColor
+        HoverBorderColor: =Label5.BorderColor
+        HoverColor: =Label5.Color
+        HoverFill: =Label5.Fill
+        PressedBorderColor: =Label5.BorderColor
+        PressedColor: =Label5.Color
+        PressedFill: =Label5.Fill
+        Text: ="Search Here"
+        X: =1154
+        Y: =88
+        ZIndex: =24
+
+    Label1_1 As label:
+        Align: =LayoutAlignItems.Center
+        FocusedBorderColor: =Label1_1.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =51
+        HoverBorderColor: =Label1_1.BorderColor
+        HoverColor: =Label1_1.Color
+        HoverFill: =Label1_1.Fill
+        PressedBorderColor: =Label1_1.BorderColor
+        PressedColor: =Label1_1.Color
+        PressedFill: =Label1_1.Fill
+        Size: =28
+        Text: ="Update Existing"
+        Width: =590
+        X: =714
+        Y: =12
+        ZIndex: =25
+
+    Image1_1 As image:
+        FocusedBorderColor: =Image1_1.BorderColor
+        Height: =33
+        HoverBorderColor: =ColorFade(Image1_1.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_1.Fill, 20%)
+        Image: ='GSI White'
+        PressedBorderColor: =ColorFade(Image1_1.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_1.Fill, -20%)
+        X: =1266
+        Y: =734
+        ZIndex: =26
+
+    Icon7 As icon.Hamburger:
+        BorderColor: =RGBA(152, 208, 70, 1)
+        Color: =RGBA(152, 208, 70, 1)
+        DisabledFill: =Icon7.Fill
+        FocusedBorderColor: =Icon7.BorderColor
+        HoverBorderColor: =ColorFade(Icon7.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon7.Color, 20%)
+        HoverFill: =Icon7.Fill
+        Icon: =Icon.Hamburger
+        OnSelect: =Navigate(Screen3,ScreenTransition.None)
+        PressedBorderColor: =ColorFade(Icon7.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon7.Color, -20%)
+        PressedFill: =Icon7.Fill
+        Tooltip: ="Reporting"
+        X: =17
+        ZIndex: =27
+
+    Icon8 As icon.Calendar:
+        BorderColor: =RGBA(152, 208, 70, 1)
+        Color: =RGBA(152, 208, 70, 1)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =Icon8.Fill
+        DisplayMode: |-
+            =//If(IsEmpty(Filter(CollReviewer, CurrentUser  in CollReviewer.ReviewerName))=true,DisplayMode.Disabled,DisplayMode.Edit)
+            DisplayMode.Edit
+        Fill: =RGBA(100, 100, 0, 0)
+        FocusedBorderColor: =Icon8.BorderColor
+        HoverBorderColor: =ColorFade(Icon8.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon8.Color, 20%)
+        HoverFill: =Icon8.Fill
+        Icon: =Icon.AddToCalendar
+        OnSelect: =Navigate(ScreenUnlockClaimNum,ScreenTransition.None)
+        PressedBorderColor: =ColorFade(Icon8.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon8.Color, -20%)
+        PressedFill: =Icon8.Fill
+        Tooltip: ="Admin Settings"
+        X: =99
+        Y: =5
+        ZIndex: =28
+
+    Label18 As label:
+        FocusedBorderColor: =Label18.BorderColor
+        Height: =22
+        HoverBorderColor: =Label18.BorderColor
+        HoverColor: =Label18.Color
+        HoverFill: =Label18.Fill
+        PressedBorderColor: =Label18.BorderColor
+        PressedColor: =Label18.Color
+        PressedFill: =Label18.Fill
+        Size: =8
+        Text: ="Test Version 2.2"
+        Y: =744
+        ZIndex: =29
+
+    Label19 As label:
+        FocusedBorderColor: =Label19.BorderColor
+        Height: =44
+        HoverBorderColor: =Label19.BorderColor
+        HoverColor: =Label19.Color
+        HoverFill: =Label19.Fill
+        PressedBorderColor: =Label19.BorderColor
+        PressedColor: =Label19.Color
+        PressedFill: =Label19.Fill
+        Text: =Text(DatePicker1.SelectedDate, "[$-en-US]dd/mm/yyyy")
+        Visible: =false
+        Width: =395
+        X: =87
+        Y: =690
+        ZIndex: =30
+
+    Label15 As label:
+        Text: =Text(DatePicker1.SelectedDate,"[$-en-GB]mm/dd/yyyy")
+        Visible: =false
+        X: =182
+        Y: =694
+        ZIndex: =31
+
+    Button1 As button:
+        BorderColor: =ColorFade(Button1.Fill, -15%)
+        HoverBorderColor: =ColorFade(Button1.BorderColor, 20%)
+        OnSelect: =Navigate(Screen4,ScreenTransition.None)
+        PressedBorderColor: =Button1.Fill
+        PressedColor: =Button1.Fill
+        PressedFill: =Button1.Color
+        Text: ="BI Report"
+        Visible: =false
+        X: =204
+        Y: =88
+        ZIndex: =32
+
+    Icon13 As icon.Journal:
+        BorderColor: =RGBA(141, 198, 63, 1)
+        Color: =RGBA(141, 198, 63, 1)
+        DisabledFill: =Icon13.Fill
+        HoverBorderColor: =ColorFade(Icon13.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon13.Color, 20%)
+        HoverFill: =Icon13.Fill
+        Icon: =Icon.Journal
+        OnSelect: =Navigate(Screen4,ScreenTransition.None)
+        PressedBorderColor: =ColorFade(Icon13.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon13.Color, -20%)
+        PressedFill: =Icon13.Fill
+        Tooltip: ="BI Report"
+        X: =608
+        Y: =5
+        ZIndex: =33
+

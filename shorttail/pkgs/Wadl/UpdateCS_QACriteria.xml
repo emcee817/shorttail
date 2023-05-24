@@ -1,0 +1,86 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://australia-001.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="UpdateCS_QACriteria" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="UpdateCS_QACriteria" />
+  <grammars>
+    <jsonTypes targetNamespace="https://australia-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <integer name="ManualTriggerInput_Updateitem_Id_def" />
+      <string name="ManualTriggerInput_Updateitem_Title_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ1_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ1Comment1_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ1Comment2_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ2_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ2Comment1_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ2Comment2_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ3_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ3Comment1_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ3Comment2_def" />
+      <number name="ManualTriggerInput_Updateitem_CSQ1points_def" />
+      <number name="ManualTriggerInput_Updateitem_CSQ2Points_def" />
+      <number name="ManualTriggerInput_Updateitem_CSQ3Points_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ4_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ4Comment1_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ4Comment2_def" />
+      <string name="ManualTriggerInput_Updateitem_CSQ4Points_def" />
+      <object name="ManualTriggerInput">
+        <property name="Updateitem_Id" type="integer" />
+        <property name="Updateitem_Title" type="string" />
+        <property name="Updateitem_CSQ1" type="string" />
+        <property name="Updateitem_CSQ1Comment1" type="string" />
+        <property name="Updateitem_CSQ1Comment2" type="string" />
+        <property name="Updateitem_CSQ2" type="string" />
+        <property name="Updateitem_CSQ2Comment1" type="string" />
+        <property name="Updateitem_CSQ2Comment2" type="string" />
+        <property name="Updateitem_CSQ3" type="string" />
+        <property name="Updateitem_CSQ3Comment1" type="string" />
+        <property name="Updateitem_CSQ3Comment2" type="string" />
+        <property name="Updateitem_CSQ1points" type="number" />
+        <property name="Updateitem_CSQ2Points" type="number" />
+        <property name="Updateitem_CSQ3Points" type="number" />
+        <property name="Updateitem_CSQ4" type="string" />
+        <property name="Updateitem_CSQ4Comment1" type="string" />
+        <property name="Updateitem_CSQ4Comment2" type="string" />
+        <property name="Updateitem_CSQ4Points" type="string" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://australia-001.azure-apim.net/apim/logicflows">
+    <resource path="/{connectionId}/triggers/manual/run">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="Run">
+        <doc title="Runs a logic flow trigger." />
+        <request>
+          <param style="query" name="api-version" type="xs:string" required="true" fixed="2015-02-01-preview">
+            <doc title="The api version" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="Updateitem_Id" path="/Updateitem_Id" type="xs:long" required="true" />
+            <param style="plain" name="Updateitem_Title" path="/Updateitem_Title" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ1" path="/Updateitem_CSQ1" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ1Comment1" path="/Updateitem_CSQ1Comment1" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ1Comment2" path="/Updateitem_CSQ1Comment2" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ2" path="/Updateitem_CSQ2" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ2Comment1" path="/Updateitem_CSQ2Comment1" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ2Comment2" path="/Updateitem_CSQ2Comment2" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ3" path="/Updateitem_CSQ3" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ3Comment1" path="/Updateitem_CSQ3Comment1" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ3Comment2" path="/Updateitem_CSQ3Comment2" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ1points" path="/Updateitem_CSQ1points" type="xs:double" required="true" />
+            <param style="plain" name="Updateitem_CSQ2Points" path="/Updateitem_CSQ2Points" type="xs:double" required="true" />
+            <param style="plain" name="Updateitem_CSQ3Points" path="/Updateitem_CSQ3Points" type="xs:double" required="true" />
+            <param style="plain" name="Updateitem_CSQ4" path="/Updateitem_CSQ4" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ4Comment1" path="/Updateitem_CSQ4Comment1" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ4Comment2" path="/Updateitem_CSQ4Comment2" type="xs:string" required="true" />
+            <param style="plain" name="Updateitem_CSQ4Points" path="/Updateitem_CSQ4Points" type="xs:string" required="true" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="logicflows" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

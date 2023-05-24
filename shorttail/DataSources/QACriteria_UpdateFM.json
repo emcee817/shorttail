@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "1560c83e-bf0a-4d81-a41d-7dbbcbdeeb51",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "QACriteria_UpdateFM",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

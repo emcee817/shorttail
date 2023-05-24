@@ -1,0 +1,1006 @@
+Screen3 As screen:
+    Height: =Max(App.Height, App.DesignHeight)
+    Orientation: =If(Screen3.Width < Screen3.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Screen3.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Button11 As button:
+        BorderColor: =ColorFade(Button11.Fill, -15%)
+        FocusedBorderColor: =Button11.BorderColor
+        HoverBorderColor: =ColorFade(Button11.BorderColor, 20%)
+        OnSelect: |-
+            =UpdateContext({resettext: !resettext});
+            UpdateContext({resettext: !resettext});
+        PressedBorderColor: =Button11.Fill
+        PressedColor: =Button11.Fill
+        PressedFill: =Button11.Color
+        Text: ="Button"
+        Visible: =false
+        X: =786
+        Y: =128
+        ZIndex: =4
+
+    Image1_2 As image:
+        FocusedBorderColor: =Image1_2.BorderColor
+        Height: =33
+        HoverBorderColor: =ColorFade(Image1_2.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_2.Fill, 20%)
+        Image: ='GSI White'
+        PressedBorderColor: =ColorFade(Image1_2.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_2.Fill, -20%)
+        X: =1266
+        Y: =734
+        ZIndex: =22
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =22
+
+        GalleryAll As gallery.galleryVertical:
+            DisabledBorderColor: =GalleryAll.BorderColor
+            DisabledFill: =GalleryAll.Fill
+            Height: =121
+            HoverBorderColor: =GalleryAll.BorderColor
+            HoverFill: =GalleryAll.Fill
+            Items: =Filter(CollQACheckList, Status = "Closed" && MonthInReview in CmbTeamFilter_1.SelectedItems )
+            Layout: =Layout.Vertical
+            LoadingSpinnerColor: =GalleryAll.BorderColor
+            PressedBorderColor: =GalleryAll.BorderColor
+            PressedFill: =GalleryAll.Fill
+            TemplateSize: =46
+            Visible: =false
+            Width: =673
+            X: =649
+            Y: =571
+            ZIndex: =14
+
+            Label10_2 As label:
+                FocusedBorderColor: =Label10_2.BorderColor
+                HoverBorderColor: =Label10_2.BorderColor
+                HoverColor: =Label10_2.Color
+                HoverFill: =Label10_2.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_2.BorderColor
+                PressedColor: =Label10_2.Color
+                PressedFill: =Label10_2.Fill
+                Text: =ThisItem.ClaimNumber
+                X: =44
+                ZIndex: =1
+
+            Label10_3 As label:
+                FocusedBorderColor: =Label10_3.BorderColor
+                HoverBorderColor: =Label10_3.BorderColor
+                HoverColor: =Label10_3.Color
+                HoverFill: =Label10_3.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_3.BorderColor
+                PressedColor: =Label10_3.Color
+                PressedFill: =Label10_3.Fill
+                Text: =ThisItem.QATotalPoints
+                X: =306
+                ZIndex: =2
+
+            Label10_4 As label:
+                FocusedBorderColor: =Label10_4.BorderColor
+                HoverBorderColor: =Label10_4.BorderColor
+                HoverColor: =Label10_4.Color
+                HoverFill: =Label10_4.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_4.BorderColor
+                PressedColor: =Label10_4.Color
+                PressedFill: =Label10_4.Fill
+                Text: =ThisItem.TeamMember
+                X: =408
+                Y: =6
+                ZIndex: =3
+
+        LblQATotalNumofRowAll As label:
+            FocusedBorderColor: =LblQATotalNumofRowAll.BorderColor
+            Height: =21
+            HoverBorderColor: =LblQATotalNumofRowAll.BorderColor
+            HoverColor: =LblQATotalNumofRowAll.Color
+            HoverFill: =LblQATotalNumofRowAll.Fill
+            PressedBorderColor: =LblQATotalNumofRowAll.BorderColor
+            PressedColor: =LblQATotalNumofRowAll.Color
+            PressedFill: =LblQATotalNumofRowAll.Fill
+            Text: |-
+                =//CountRows(Filter(QACheckList,TeamMember = CmbTeamMemberFilter.Selected.Result ).ClaimNumber)
+                CountRows(GalleryAll.AllItems)
+            Visible: =false
+            X: =713
+            Y: =730
+            ZIndex: =15
+
+        LblQATotalSumAll As label:
+            FocusedBorderColor: =LblQATotalSumAll.BorderColor
+            Height: =21
+            HoverBorderColor: =LblQATotalSumAll.BorderColor
+            HoverColor: =LblQATotalSumAll.Color
+            HoverFill: =LblQATotalSumAll.Fill
+            PressedBorderColor: =LblQATotalSumAll.BorderColor
+            PressedColor: =LblQATotalSumAll.Color
+            PressedFill: =LblQATotalSumAll.Fill
+            Text: =Sum(GalleryAll.AllItems,QATotalPoints)
+            Visible: =false
+            X: =880
+            Y: =730
+            ZIndex: =16
+
+        Label12_1 As label:
+            FocusedBorderColor: =Label12_1.BorderColor
+            Height: =21
+            HoverBorderColor: =Label12_1.BorderColor
+            HoverColor: =Label12_1.Color
+            HoverFill: =Label12_1.Fill
+            PressedBorderColor: =Label12_1.BorderColor
+            PressedColor: =Label12_1.Color
+            PressedFill: =Label12_1.Fill
+            Text: =Value(LblQATotalSumAll.Text)/Value(LblQATotalNumofRowAll.Text) & "%"
+            Visible: =false
+            X: =1068
+            Y: =730
+            ZIndex: =17
+
+    TeamFilterGroup As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =22
+
+        Gallery1 As gallery.galleryVertical:
+            DisabledBorderColor: =Gallery1.BorderColor
+            DisabledFill: =Gallery1.Fill
+            Height: =318
+            HoverBorderColor: =Gallery1.BorderColor
+            HoverFill: =Gallery1.Fill
+            Items: |-
+                =
+                
+                //Filter(QACheckList,TeamMember = CmbTeamMemberFilter.Selected.Result && MonthInReview = CmbTeamFilter.Selected.Result && Status = "Closed" )
+                Filter(CollQACheckList,TeamMember = CmbTeamMemberFilter.Selected.Result && MonthInReview in CmbTeamFilter.SelectedItems && Status = "Closed" )
+            Layout: =Layout.Vertical
+            LoadingSpinnerColor: =Gallery1.BorderColor
+            PressedBorderColor: =Gallery1.BorderColor
+            PressedFill: =Gallery1.Fill
+            TemplateSize: =23
+            Width: =642
+            X: =685
+            Y: =312
+            ZIndex: =1
+
+            Label10 As label:
+                FocusedBorderColor: =Label10.BorderColor
+                Height: =26
+                HoverBorderColor: =Label10.BorderColor
+                HoverColor: =Label10.Color
+                HoverFill: =Label10.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10.BorderColor
+                PressedColor: =Label10.Color
+                PressedFill: =Label10.Fill
+                Size: =8
+                Text: =ThisItem.ClaimNumber
+                X: =40
+                Y: =4
+                ZIndex: =1
+
+            Label10_1 As label:
+                Align: =TextPosition.Right
+                FocusedBorderColor: =Label10_1.BorderColor
+                Height: =26
+                HoverBorderColor: =Label10_1.BorderColor
+                HoverColor: =Label10_1.Color
+                HoverFill: =Label10_1.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_1.BorderColor
+                PressedColor: =Label10_1.Color
+                PressedFill: =Label10_1.Fill
+                Size: =8
+                Text: =ThisItem.QATotalPoints
+                Width: =67
+                X: =265
+                Y: =4
+                ZIndex: =2
+
+            Label10_10 As label:
+                Align: =TextPosition.Right
+                FocusedBorderColor: =Label10_10.BorderColor
+                Height: =26
+                HoverBorderColor: =Label10_10.BorderColor
+                HoverColor: =Label10_10.Color
+                HoverFill: =Label10_10.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_10.BorderColor
+                PressedColor: =Label10_10.Color
+                PressedFill: =Label10_10.Fill
+                Size: =8
+                Text: =ThisItem.TeamMember
+                Width: =190
+                X: =384
+                Y: =4
+                ZIndex: =3
+
+        CmbTeamMemberFilter As combobox:
+            DefaultSelectedItems: =
+            DisplayFields: =["Result"]
+            FocusedBorderColor: =CmbTeamMemberFilter.BorderColor
+            HoverBorderColor: =ColorFade(CmbTeamMemberFilter.BorderColor, 15%)
+            InputTextPlaceholder: ="Please Select Team Member"
+            IsSearchable: =false
+            Items: |-
+                =//Sort(TeamMember,Staff,Ascending)
+                ForAll(Distinct(Sort(QACheckList,TeamMember,SortOrder.Ascending),TeamMember), {Result: ThisRecord.Value})
+            MoreItemsButtonColor: =CmbTeamMemberFilter.ChevronBackground
+            NoSelectionText: ="Please Select Team Member"
+            OnChange: |-
+                =
+                UpdateContext({Loadingtag: true});
+                
+                UpdateContext({Loadingtag: false})
+            PressedBorderColor: =CmbTeamMemberFilter.HoverBorderColor
+            Reset: =resettext
+            SearchFields: =["Result"]
+            SearchItems: =[]
+            SelectionTagColor: =CmbTeamMemberFilter.HoverColor
+            SelectionTagFill: =CmbTeamMemberFilter.HoverFill
+            SelectMultiple: =false
+            Size: =9
+            X: =973
+            Y: =164
+            ZIndex: =2
+
+        CmbTeam_1 As combobox:
+            DefaultSelectedItems: |-
+                =//Filter(TeamMember,Team = CmbTeamMemberFilter.Selected.Result).Team
+                Filter(TeamMember, Team="Liability Claims Team")
+            DisplayFields: =["Result"]
+            FocusedBorderColor: =CmbTeam_1.BorderColor
+            HoverBorderColor: =ColorFade(CmbTeam_1.BorderColor, 15%)
+            InputTextPlaceholder: ="Please Select Team Name"
+            IsSearchable: =false
+            Items: |-
+                =ForAll(Distinct(Sort(TeamMember,Team,SortOrder.Ascending),Team), {Result: ThisRecord.Value})
+            MoreItemsButtonColor: =CmbTeam_1.ChevronBackground
+            NoSelectionText: ="Please Select Team Name"
+            PressedBorderColor: =CmbTeam_1.HoverBorderColor
+            Reset: |-
+                =
+                resettext
+            SearchFields: =["Result"]
+            SearchItems: =[]
+            SelectionTagColor: =CmbTeam_1.HoverColor
+            SelectionTagFill: =CmbTeam_1.HoverFill
+            SelectMultiple: =false
+            Size: =9
+            X: =973
+            Y: =111
+            ZIndex: =3
+
+        CmbTeamFilter As combobox:
+            DefaultSelectedItems: =
+            DisplayFields: =["Result"]
+            FocusedBorderColor: =CmbTeamFilter.BorderColor
+            HoverBorderColor: =ColorFade(CmbTeamFilter.BorderColor, 15%)
+            InputTextPlaceholder: ="Please Select Month in Review"
+            IsSearchable: =false
+            Items: |-
+                =ForAll(Distinct(Sort(QACheckList,MonthInReview,SortOrder.Ascending),MonthInReview), {Result: ThisRecord.Value})
+            MoreItemsButtonColor: =CmbTeamFilter.ChevronBackground
+            NoSelectionText: ="Please Select Month in Review"
+            OnChange: |-
+                =UpdateContext({Loadingtag: true});
+                
+                UpdateContext({Loadingtag: false})
+            PressedBorderColor: =CmbTeamFilter.HoverBorderColor
+            Reset: |-
+                =
+                resettext
+            SearchFields: =["Result"]
+            SearchItems: =[]
+            SelectionTagColor: =CmbTeamFilter.HoverColor
+            SelectionTagFill: =CmbTeamFilter.HoverFill
+            Size: =9
+            X: =973
+            Y: =218
+            ZIndex: =5
+
+        LblQATotalNumofRow As label:
+            Align: =LayoutAlignItems.Center
+            FocusedBorderColor: =LblQATotalNumofRow.BorderColor
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =LblQATotalNumofRow.BorderColor
+            HoverColor: =LblQATotalNumofRow.Color
+            HoverFill: =LblQATotalNumofRow.Fill
+            PressedBorderColor: =LblQATotalNumofRow.BorderColor
+            PressedColor: =LblQATotalNumofRow.Color
+            PressedFill: =LblQATotalNumofRow.Fill
+            Size: =14
+            Text: |-
+                =//CountRows(Filter(QACheckList,TeamMember = CmbTeamMemberFilter.Selected.Result ).ClaimNumber)
+                CountRows(Gallery1.AllItems)
+            Width: =71
+            X: =777
+            Y: =672
+            ZIndex: =6
+
+        LblQATotalSum As label:
+            Align: =TextPosition.Right
+            FocusedBorderColor: =LblQATotalSum.BorderColor
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =LblQATotalSum.BorderColor
+            HoverColor: =LblQATotalSum.Color
+            HoverFill: =LblQATotalSum.Fill
+            PressedBorderColor: =LblQATotalSum.BorderColor
+            PressedColor: =LblQATotalSum.Color
+            PressedFill: =LblQATotalSum.Fill
+            Size: =14
+            Text: =Sum(Gallery1.AllItems,QATotalPoints)
+            Width: =110
+            X: =920
+            Y: =672
+            ZIndex: =7
+
+        Label12 As label:
+            Align: =TextPosition.Right
+            FocusedBorderColor: =Label12.BorderColor
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =Label12.BorderColor
+            HoverColor: =Label12.Color
+            HoverFill: =Label12.Fill
+            PressedBorderColor: =Label12.BorderColor
+            PressedColor: =Label12.Color
+            PressedFill: =Label12.Fill
+            Size: =14
+            Text: |-
+                =Text(Value(LblQATotalSum.Text)/Value(LblQATotalNumofRow.Text),"[$-en-US]#.##") & "%"
+            Width: =110
+            X: =1132
+            Y: =672
+            ZIndex: =8
+
+        Label13 As label:
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =Label13.BorderColor
+            HoverBorderColor: =Label13.BorderColor
+            HoverColor: =Label13.Color
+            HoverFill: =Label13.Fill
+            PressedBorderColor: =Label13.BorderColor
+            PressedColor: =Label13.Color
+            PressedFill: =Label13.Fill
+            Text: ="Count Of Review"
+            Width: =217
+            X: =733
+            Y: =634
+            ZIndex: =9
+
+        Label13_1 As label:
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =Label13_1.BorderColor
+            HoverBorderColor: =Label13_1.BorderColor
+            HoverColor: =Label13_1.Color
+            HoverFill: =Label13_1.Fill
+            PressedBorderColor: =Label13_1.BorderColor
+            PressedColor: =Label13_1.Color
+            PressedFill: =Label13_1.Fill
+            Text: ="Points Earned"
+            Width: =215
+            X: =945
+            Y: =634
+            ZIndex: =10
+
+        Label13_2 As label:
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =Label13_2.BorderColor
+            HoverBorderColor: =Label13_2.BorderColor
+            HoverColor: =Label13_2.Color
+            HoverFill: =Label13_2.Fill
+            PressedBorderColor: =Label13_2.BorderColor
+            PressedColor: =Label13_2.Color
+            PressedFill: =Label13_2.Fill
+            Text: ="Sum of %"
+            Width: =145
+            X: =1160
+            Y: =634
+            ZIndex: =11
+
+        Label13_3 As label:
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =Label13_3.BorderColor
+            HoverBorderColor: =Label13_3.BorderColor
+            HoverColor: =Label13_3.Color
+            HoverFill: =Label13_3.Fill
+            PressedBorderColor: =Label13_3.BorderColor
+            PressedColor: =Label13_3.Color
+            PressedFill: =Label13_3.Fill
+            Text: ="Claim Number"
+            Width: =191
+            X: =730
+            Y: =272
+            ZIndex: =12
+
+        Label13_4 As label:
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =Label13_4.BorderColor
+            HoverBorderColor: =Label13_4.BorderColor
+            HoverColor: =Label13_4.Color
+            HoverFill: =Label13_4.Fill
+            PressedBorderColor: =Label13_4.BorderColor
+            PressedColor: =Label13_4.Color
+            PressedFill: =Label13_4.Fill
+            Text: ="Points/ Percentage"
+            Width: =305
+            X: =921
+            Y: =272
+            ZIndex: =13
+
+    GrpByTeamSummary As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =22
+
+        GalleryAllTeamMembers As gallery.galleryVertical:
+            DisabledBorderColor: =GalleryAllTeamMembers.BorderColor
+            DisabledFill: =GalleryAllTeamMembers.Fill
+            Height: =200
+            HoverBorderColor: =GalleryAllTeamMembers.BorderColor
+            HoverFill: =GalleryAllTeamMembers.Fill
+            Items: |-
+                =//GroupBy(QACheckList,"TeamMember","grp" )
+                //GroupBy(Filter(QACheckList,Status = "Closed" && MonthInReview = CmbTeamFilter_1.Selected.Result),"TeamMember","grp" )
+                GroupBy(Filter(CollQACheckList,Status = "Closed" && MonthInReview in CmbTeamFilter_1.SelectedItems),"TeamMember","grp")
+                //Filter(CollQACheckList,Status = "Closed" && TeamMember = CmbTeamMemberFilter.Selected.Result && MonthInReview in CmbTeamFilter.SelectedItems   )
+                //Filter(CollQACheckList,TeamMember = CmbTeamMemberFilter.Selected.Result && MonthInReview in CmbTeamFilter.SelectedItems && Status = "Closed" )
+            Layout: =Layout.Vertical
+            LoadingSpinnerColor: =GalleryAllTeamMembers.BorderColor
+            PressedBorderColor: =GalleryAllTeamMembers.BorderColor
+            PressedFill: =GalleryAllTeamMembers.Fill
+            TemplateSize: =18
+            Width: =483
+            X: =112
+            Y: =427
+            ZIndex: =18
+
+            Label10_5 As label:
+                Align: =TextPosition.Right
+                FocusedBorderColor: =Label10_5.BorderColor
+                Height: =17
+                HoverBorderColor: =Label10_5.BorderColor
+                HoverColor: =Label10_5.Color
+                HoverFill: =Label10_5.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_5.BorderColor
+                PressedColor: =Label10_5.Color
+                PressedFill: =Label10_5.Fill
+                Size: =9
+                Text: |-
+                    =Text(Sum(ThisItem.grp,QATotalPoints)/ Label10_6.Text,"[$-en-US]##.##")
+                    
+                    //Text(5.678,"#.#") becomes 5.7
+                Width: =63
+                X: =378
+                ZIndex: =1
+
+            Label10_6 As label:
+                Align: =TextPosition.Right
+                FocusedBorderColor: =Label10_6.BorderColor
+                Height: =17
+                HoverBorderColor: =Label10_6.BorderColor
+                HoverColor: =Label10_6.Color
+                HoverFill: =Label10_6.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_6.BorderColor
+                PressedColor: =Label10_6.Color
+                PressedFill: =Label10_6.Fill
+                Size: =9
+                Text: =CountRows(ThisItem.grp)
+                Width: =47
+                X: =225
+                ZIndex: =2
+
+            Label10_7 As label:
+                FocusedBorderColor: =Label10_7.BorderColor
+                Height: =17
+                HoverBorderColor: =Label10_7.BorderColor
+                HoverColor: =Label10_7.Color
+                HoverFill: =Label10_7.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_7.BorderColor
+                PressedColor: =Label10_7.Color
+                PressedFill: =Label10_7.Fill
+                Size: =9
+                Text: =ThisItem.TeamMember
+                Width: =219
+                X: =6
+                ZIndex: =3
+
+            Label10_8 As label:
+                Align: =TextPosition.Right
+                FocusedBorderColor: =Label10_8.BorderColor
+                Height: =17
+                HoverBorderColor: =Label10_8.BorderColor
+                HoverColor: =Label10_8.Color
+                HoverFill: =Label10_8.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_8.BorderColor
+                PressedColor: =Label10_8.Color
+                PressedFill: =Label10_8.Fill
+                Size: =9
+                Text: =Sum(ThisItem.grp,QATotalPoints)
+                Width: =65
+                X: =308
+                ZIndex: =4
+
+            Label10_9 As label:
+                Align: =TextPosition.Left
+                FocusedBorderColor: =Label10_9.BorderColor
+                Height: =17
+                HoverBorderColor: =Label10_9.BorderColor
+                HoverColor: =Label10_9.Color
+                HoverFill: =Label10_9.Fill
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label10_9.BorderColor
+                PressedColor: =Label10_9.Color
+                PressedFill: =Label10_9.Fill
+                Size: =9
+                Text: ="%"
+                Width: =23
+                X: =441
+                ZIndex: =5
+
+        LblQATotalNumofRowAll_1 As label:
+            Align: =TextPosition.Right
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =LblQATotalNumofRowAll_1.BorderColor
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =LblQATotalNumofRowAll_1.BorderColor
+            HoverColor: =LblQATotalNumofRowAll_1.Color
+            HoverFill: =LblQATotalNumofRowAll_1.Fill
+            PressedBorderColor: =LblQATotalNumofRowAll_1.BorderColor
+            PressedColor: =LblQATotalNumofRowAll_1.Color
+            PressedFill: =LblQATotalNumofRowAll_1.Fill
+            Size: =14
+            Text: |-
+                =//CountRows(Filter(QACheckList,TeamMember = CmbTeamMemberFilter.Selected.Result ).ClaimNumber)
+                //CountRows(GalleryAll.AllItems)
+                CountRows(GalleryAll.AllItems)
+            Width: =75
+            X: =310
+            Y: =630
+            ZIndex: =19
+
+        LblQATotalSumAll_1 As label:
+            Align: =TextPosition.Right
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =LblQATotalSumAll_1.BorderColor
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =LblQATotalSumAll_1.BorderColor
+            HoverColor: =LblQATotalSumAll_1.Color
+            HoverFill: =LblQATotalSumAll_1.Fill
+            PressedBorderColor: =LblQATotalSumAll_1.BorderColor
+            PressedColor: =LblQATotalSumAll_1.Color
+            PressedFill: =LblQATotalSumAll_1.Fill
+            Size: =14
+            Text: =Sum(GalleryAll.AllItems,QATotalPoints)
+            Width: =99
+            X: =385
+            Y: =630
+            ZIndex: =20
+
+        LblTeamOverAllPercentage As label:
+            Align: =TextPosition.Right
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =LblTeamOverAllPercentage.BorderColor
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =LblTeamOverAllPercentage.BorderColor
+            HoverColor: =LblTeamOverAllPercentage.Color
+            HoverFill: =LblTeamOverAllPercentage.Fill
+            PressedBorderColor: =LblTeamOverAllPercentage.BorderColor
+            PressedColor: =LblTeamOverAllPercentage.Color
+            PressedFill: =LblTeamOverAllPercentage.Fill
+            Size: =14
+            Text: |-
+                =Text(Value(LblQATotalSumAll_1.Text)/Value(LblQATotalNumofRowAll_1.Text),"[$-en-US]##.##") & "%"
+            Width: =91
+            X: =484
+            Y: =630
+            ZIndex: =21
+
+    Label2 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label2.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label2.BorderColor
+        HoverColor: =Label2.Color
+        HoverFill: =Label2.Fill
+        PressedBorderColor: =Label2.BorderColor
+        PressedColor: =Label2.Color
+        PressedFill: =Label2.Fill
+        Text: ="Team"
+        Width: =230
+        X: =124
+        Y: =176
+        ZIndex: =23
+
+    Label2_1 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label2_1.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label2_1.BorderColor
+        HoverColor: =Label2_1.Color
+        HoverFill: =Label2_1.Fill
+        PressedBorderColor: =Label2_1.BorderColor
+        PressedColor: =Label2_1.Color
+        PressedFill: =Label2_1.Fill
+        Text: ="Overall Score"
+        Width: =230
+        X: =354
+        Y: =176
+        ZIndex: =24
+
+    Label7 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        FocusedBorderColor: =Label7.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =106
+        HoverBorderColor: =Label7.BorderColor
+        HoverColor: =Label7.Color
+        HoverFill: =Label7.Fill
+        PressedBorderColor: =Label7.BorderColor
+        PressedColor: =Label7.Color
+        PressedFill: =Label7.Fill
+        Size: =18
+        Text: =CmbTeam_1.Selected.Result
+        Width: =230
+        X: =124
+        Y: =216
+        ZIndex: =25
+
+    Label9 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        FocusedBorderColor: =Label9.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =53
+        HoverBorderColor: =Label9.BorderColor
+        HoverColor: =Label9.Color
+        HoverFill: =Label9.Fill
+        PressedBorderColor: =Label9.BorderColor
+        PressedColor: =Label9.Color
+        PressedFill: =Label9.Fill
+        Text: ="QAFR"
+        Width: =230
+        X: =354
+        Y: =216
+        ZIndex: =26
+
+    Label9_1 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        Color: =RGBA(56, 96, 178, 1)
+        FocusedBorderColor: =Label9_1.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =53
+        HoverBorderColor: =Label9_1.BorderColor
+        HoverColor: =Label9_1.Color
+        HoverFill: =Label9_1.Fill
+        PressedBorderColor: =Label9_1.BorderColor
+        PressedColor: =Label9_1.Color
+        PressedFill: =Label9_1.Fill
+        Size: =14
+        Text: =LblTeamOverAllPercentage.Text
+        Width: =230
+        X: =354
+        Y: =269
+        ZIndex: =27
+
+    Label2_2 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label2_2.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        HoverBorderColor: =Label2_2.BorderColor
+        HoverColor: =Label2_2.Color
+        HoverFill: =Label2_2.Fill
+        PressedBorderColor: =Label2_2.BorderColor
+        PressedColor: =Label2_2.Color
+        PressedFill: =Label2_2.Fill
+        Size: =18
+        Text: ="QA FILE REVIEW"
+        Width: =460
+        X: =123
+        Y: =327
+        ZIndex: =28
+
+    Label11 As label:
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label11.BorderColor
+        Height: =52
+        HoverBorderColor: =Label11.BorderColor
+        HoverColor: =Label11.Color
+        HoverFill: =Label11.Fill
+        PressedBorderColor: =Label11.BorderColor
+        PressedColor: =Label11.Color
+        PressedFill: =Label11.Fill
+        Text: ="Team Members"
+        Width: =229
+        X: =124
+        Y: =375
+        ZIndex: =29
+
+    Label11_1 As label:
+        Align: =LayoutAlignItems.Center
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label11_1.BorderColor
+        Height: =52
+        HoverBorderColor: =Label11_1.BorderColor
+        HoverColor: =Label11_1.Color
+        HoverFill: =Label11_1.Fill
+        PressedBorderColor: =Label11_1.BorderColor
+        PressedColor: =Label11_1.Color
+        PressedFill: =Label11_1.Fill
+        Text: |-
+            ="Count of 
+            Review"
+        Width: =82
+        X: =343
+        Y: =375
+        ZIndex: =30
+
+    Label11_2 As label:
+        Align: =LayoutAlignItems.Center
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label11_2.BorderColor
+        Height: =52
+        HoverBorderColor: =Label11_2.BorderColor
+        HoverColor: =Label11_2.Color
+        HoverFill: =Label11_2.Fill
+        PressedBorderColor: =Label11_2.BorderColor
+        PressedColor: =Label11_2.Color
+        PressedFill: =Label11_2.Fill
+        Text: |-
+            ="Points
+            Earned"
+        Width: =82
+        X: =425
+        Y: =375
+        ZIndex: =31
+
+    Label11_3 As label:
+        Align: =LayoutAlignItems.Center
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label11_3.BorderColor
+        Height: =52
+        HoverBorderColor: =Label11_3.BorderColor
+        HoverColor: =Label11_3.Color
+        HoverFill: =Label11_3.Fill
+        PressedBorderColor: =Label11_3.BorderColor
+        PressedColor: =Label11_3.Color
+        PressedFill: =Label11_3.Fill
+        Text: ="Sum of %"
+        Width: =82
+        X: =502
+        Y: =375
+        ZIndex: =32
+
+    Label11_4 As label:
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label11_4.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label11_4.BorderColor
+        HoverColor: =Label11_4.Color
+        HoverFill: =Label11_4.Fill
+        PressedBorderColor: =Label11_4.BorderColor
+        PressedColor: =Label11_4.Color
+        PressedFill: =Label11_4.Fill
+        Size: =14
+        Text: ="Grand Total"
+        Width: =228
+        X: =130
+        Y: =630
+        ZIndex: =33
+
+    Label2_3 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label2_3.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label2_3.BorderColor
+        HoverColor: =Label2_3.Color
+        HoverFill: =Label2_3.Fill
+        PressedBorderColor: =Label2_3.BorderColor
+        PressedColor: =Label2_3.Color
+        PressedFill: =Label2_3.Fill
+        Text: ="Team"
+        Width: =230
+        X: =730
+        Y: =111
+        ZIndex: =34
+
+    Label2_4 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label2_4.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label2_4.BorderColor
+        HoverColor: =Label2_4.Color
+        HoverFill: =Label2_4.Fill
+        PressedBorderColor: =Label2_4.BorderColor
+        PressedColor: =Label2_4.Color
+        PressedFill: =Label2_4.Fill
+        Text: ="Team Member"
+        Width: =230
+        X: =733
+        Y: =164
+        ZIndex: =35
+
+    Label2_5 As label:
+        Align: =LayoutAlignItems.Center
+        BorderThickness: =2
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label2_5.BorderColor
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =Label2_5.BorderColor
+        HoverColor: =Label2_5.Color
+        HoverFill: =Label2_5.Fill
+        PressedBorderColor: =Label2_5.BorderColor
+        PressedColor: =Label2_5.Color
+        PressedFill: =Label2_5.Fill
+        Text: ="Month in Review"
+        Width: =230
+        X: =733
+        Y: =218
+        ZIndex: =36
+
+    Label13_5 As label:
+        Fill: =RGBA(255, 191, 0, 1)
+        FocusedBorderColor: =Label13_5.BorderColor
+        HoverBorderColor: =Label13_5.BorderColor
+        HoverColor: =Label13_5.Color
+        HoverFill: =Label13_5.Fill
+        PressedBorderColor: =Label13_5.BorderColor
+        PressedColor: =Label13_5.Color
+        PressedFill: =Label13_5.Fill
+        Text: ="Team Member"
+        Width: =155
+        X: =1146
+        Y: =272
+        ZIndex: =37
+
+    Label14 As label:
+        Align: =LayoutAlignItems.Center
+        FocusedBorderColor: =Label14.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        HoverBorderColor: =Label14.BorderColor
+        HoverColor: =Label14.Color
+        HoverFill: =Label14.Fill
+        PressedBorderColor: =Label14.BorderColor
+        PressedColor: =Label14.Color
+        PressedFill: =Label14.Fill
+        Size: =20
+        Text: ="Team Summary"
+        Width: =314
+        X: =192
+        Y: =48
+        ZIndex: =38
+
+    Label14_1 As label:
+        Align: =LayoutAlignItems.Center
+        FocusedBorderColor: =Label14_1.BorderColor
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        HoverBorderColor: =Label14_1.BorderColor
+        HoverColor: =Label14_1.Color
+        HoverFill: =Label14_1.Fill
+        PressedBorderColor: =Label14_1.BorderColor
+        PressedColor: =Label14_1.Color
+        PressedFill: =Label14_1.Fill
+        Size: =20
+        Text: ="Team Member Summary"
+        Width: =419
+        X: =799
+        Y: =48
+        ZIndex: =39
+
+    Rectangle2 As rectangle:
+        DisabledFill: =Rectangle2.Fill
+        FocusedBorderColor: =Rectangle2.BorderColor
+        Height: =767
+        HoverFill: =Rectangle2.Fill
+        PressedFill: =Rectangle2.Fill
+        Width: =18
+        X: =649
+        ZIndex: =40
+
+    Icon6 As icon.Home:
+        BorderColor: =RGBA(152, 208, 70, 1)
+        Color: =RGBA(152, 208, 70, 1)
+        DisabledFill: =Icon6.Fill
+        FocusedBorderColor: =Icon6.BorderColor
+        HoverBorderColor: =ColorFade(Icon6.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon6.Color, 20%)
+        HoverFill: =Icon6.Fill
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2,ScreenTransition.None)
+        PressedBorderColor: =ColorFade(Icon6.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon6.Color, -20%)
+        PressedFill: =Icon6.Fill
+        ZIndex: =41
+
+    CmbTeamFilter_1 As combobox:
+        DefaultSelectedItems: =
+        DisplayFields: =["Result"]
+        FocusedBorderColor: =CmbTeamFilter_1.BorderColor
+        Height: =51
+        HoverBorderColor: =ColorFade(CmbTeamFilter_1.BorderColor, 15%)
+        InputTextPlaceholder: ="Please Select Month in Review"
+        IsSearchable: =false
+        Items: |-
+            =ForAll(Distinct(Sort(QACheckList,MonthInReview,SortOrder.Ascending),MonthInReview), {Result: ThisRecord.Value})
+        MoreItemsButtonColor: =CmbTeamFilter_1.ChevronBackground
+        OnChange: |-
+            =UpdateContext({Loadingtag: true});
+            
+            UpdateContext({Loadingtag: false})
+        PressedBorderColor: =CmbTeamFilter_1.HoverBorderColor
+        Reset: |-
+            =
+            resettext
+        SearchFields: =["Result"]
+        SearchItems: =[]
+        SelectionTagColor: =CmbTeamFilter_1.HoverColor
+        SelectionTagFill: =CmbTeamFilter_1.HoverFill
+        Size: =9
+        Width: =460
+        X: =124
+        Y: =113
+        ZIndex: =42
+
+    Image2 As image:
+        FocusedBorderColor: =Image2.BorderColor
+        Height: =500
+        HoverBorderColor: =ColorFade(Image2.BorderColor, 20%)
+        HoverFill: =ColorFade(Image2.Fill, 20%)
+        Image: ='MarriedMarvelousHawaiianmonkseal-small'
+        PressedBorderColor: =ColorFade(Image2.BorderColor, -20%)
+        PressedFill: =ColorFade(Image2.Fill, -20%)
+        Visible: =Loadingtag
+        Width: =726
+        X: =342
+        Y: =111
+        ZIndex: =43
+
+    Icon11 As icon.DocumentwithContent:
+        BorderColor: =RGBA(152, 208, 70, 1)
+        Color: =RGBA(152, 208, 70, 1)
+        DisabledFill: =Icon11.Fill
+        FocusedBorderColor: =Icon11.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(Icon11.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon11.Color, 20%)
+        HoverFill: =Icon11.Fill
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(ScreenReporting,ScreenTransition.None)
+        PressedBorderColor: =ColorFade(Icon11.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon11.Color, -20%)
+        PressedFill: =Icon11.Fill
+        Width: =81
+        X: =1284
+        Y: =8
+        ZIndex: =44
+

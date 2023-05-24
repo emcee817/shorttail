@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "1bf04d78-13ff-4091-8451-b615cd898e82",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "UpdatePayment_QACriteria",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

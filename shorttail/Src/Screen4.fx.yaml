@@ -1,0 +1,72 @@
+Screen4 As screen:
+
+    PowerBI4 As powerbi:
+        Height: =659
+        Reset: =varReset
+        TileUrl: |-
+            ="https://app.powerbi.com/reportEmbed?reportId=afa8e0fc-5aa7-44de-a852-ca094aa81be7&groupId=8d92062d-32c5-42cd-a6bb-94bb70de57df&autoAuth=true&ctid=3b9d6481-659b-4755-9003-e8bf10ba3d2e&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWVhc3QtYXNpYS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D
+            "
+        Width: =1300
+        WorkspaceId: ="8d92062d-32c5-42cd-a6bb-94bb70de57df"
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Icon9 As icon.Reload:
+        DisabledFill: =Icon9.Fill
+        Height: =37
+        HoverBorderColor: =ColorFade(Icon9.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon9.Color, 20%)
+        HoverFill: =Icon9.Fill
+        Icon: =Icon.Reload
+        OnSelect: |
+            =
+            
+            Set(varReset, true); 
+            Set(varReset, false);
+        PressedBorderColor: =ColorFade(Icon9.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon9.Color, -20%)
+        PressedFill: =Icon9.Fill
+        Width: =35
+        X: =1305
+        Y: =3
+        ZIndex: =2
+
+    Button4 As button:
+        BorderColor: =ColorFade(Button4.Fill, -15%)
+        Height: =35
+        HoverBorderColor: =ColorFade(Button4.BorderColor, 20%)
+        OnSelect: |-
+            =//RefreshPowerBIQACriteria.Run()
+            Back()
+        PressedBorderColor: =Button4.Fill
+        PressedColor: =Button4.Fill
+        PressedFill: =Button4.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Home"
+        X: =40
+        Y: =2
+        ZIndex: =3
+
+    RefreshBttn As button:
+        BorderColor: =ColorFade(RefreshBttn.Fill, -15%)
+        Height: =35
+        HoverBorderColor: =ColorFade(RefreshBttn.BorderColor, 20%)
+        OnSelect: |-
+            =RefreshQACriteriaDataset.Run();
+            Select(Icon9)
+        PressedBorderColor: =RefreshBttn.Fill
+        PressedColor: =RefreshBttn.Fill
+        PressedFill: =RefreshBttn.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Refresh"
+        X: =1180
+        Y: =2
+        ZIndex: =4
+

@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "2d34aa9c-eaa1-4c85-bcb9-dd6970997444",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "UpdateEstimate_QACriteria",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "88016cbd-108d-4c34-b3b8-2a0342a15e79",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "UpdateProActivity_QACriteria",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

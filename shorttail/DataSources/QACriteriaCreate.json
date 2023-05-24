@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "224f97db-a018-47e0-a388-40deecb2e8c4",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "QACriteriaCreate",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

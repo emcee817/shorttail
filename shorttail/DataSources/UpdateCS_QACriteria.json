@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "abac0e0d-241b-4173-8af8-f1eb14f47ee1",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "UpdateCS_QACriteria",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]
